@@ -5,7 +5,7 @@
         <title>funny site</title>
         <style>
             * {
-                font-family: "sans-serif";
+                font-family: "MS Sans Serif";
             }
             big {
                 display: block;
@@ -14,15 +14,19 @@
         </style>
         <script>
             function change() {
-                document.getElementById('test').innerHTML = 'thing';
+                the = ['peepee',
+                       'poopoo',
+                       ];
+                document.getElementById("the").innerHTML = the[Math.floor(Math.random() * the.length)];
             }
         </script>
     </head>
 
     <body>
         <div class="content">
-        <big>benis</big>
-        <p>:DDDDdd</p>
-            <button id="test" onclick="change();">test</button>
+        <big>vhelkome</big>
+        <p>to site</p>
+            <button id="test" onclick="change();">change</button>
+            <p id="the">CLICK</p>
     </body>
 </html>
