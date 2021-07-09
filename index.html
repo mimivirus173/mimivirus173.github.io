@@ -5,19 +5,24 @@
         <title>funny site</title>
         <style>
             * {
-                font-family: "Segoe";
+                font-family: "Impact";
             }
             big {
                 display: block;
                 font-size: 60px;
             }
         </style>
+        <script>
+            function change() {
+                document.getElementById('test').innerHTML = 'thing';
+            }
+        </script>
     </head>
 
     <body>
         <div class="content">
         <big>benis</big>
         <p>:DDDDdd</p>
-            <button id="test">test</button>
+            <button id="test" onclick="change();">test</button>
     </body>
 </html>
