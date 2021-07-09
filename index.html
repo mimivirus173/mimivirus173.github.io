@@ -17,23 +17,11 @@
             }
         </style>
         <script>
-            function change() {
-                the = ['peepee',
-                       'poopoo',
-                       'peepee',
-                       'peepee',
-                       'poopoo',
-                       'peepee',
-                       'poopoo',
-                       'peepee',
-                       'poopoo',
-                       'peepee',
-                       'poopoo',
-                       'peepee',
-                       'poopoo',
-                       'peepee',
-                       'poopoo',
-                       'spriggina',
+            function text() {
+                the = ['ayo',
+                       'whats',
+                       'poppin',
+                       'logang',
                        ];
                 document.getElementById("the").innerHTML = the[Math.floor(Math.random() * the.length)];
             }
@@ -43,9 +31,8 @@
     <body>
         <div class="content">
         <big>vhelkome</big>
-            <br>
         <p>to site</p>
-            <button id="test" onclick="change();">change below text</button>
+            <button id="test" onclick="text()" title="hi">change below text</button>
             <p id="the">text</p>
     </body>
 </html>
