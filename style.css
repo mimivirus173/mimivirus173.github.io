@@ -1,11 +1,10 @@
 body {
     background-color: rgb(125, 125, 125);
     font-family: Helvetica, Arial, sans-serif;
-    height: 100%;
 }
 
 html {
-    height: 100%;
+
 }
 
 a {
@@ -29,7 +28,6 @@ h1, h2, h3 {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
 }
 
 #content {
