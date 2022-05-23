@@ -14,3 +14,12 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+#main {
+    padding: 10px;
+}
+
+#nav {
+    width: 180px;
+}
+
