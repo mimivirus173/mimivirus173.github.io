@@ -1,5 +1,6 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
 }
 
 a {
@@ -49,4 +50,9 @@ h1, h2, h3 {
     clear: both;
     padding: 10px;
     text-align: right;
+}
+
+#saul {
+    max-width:100%;
+    height:auto;
 }
