@@ -22,7 +22,7 @@ h1, h2, h3 {
 #container {
     background-color: white;
     width: 800px;
-    height: auto;
+    height: 100vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -47,6 +47,7 @@ h1, h2, h3 {
 }
 
 #footer {
+    clear: both;
     padding: 10px;
     background-color:rgb(125, 125, 125);
     color: white;
