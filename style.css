@@ -12,6 +12,10 @@ h1, h2, h3 {
     margin: 0;
 }
 
+#thisspecificword {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 #header {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -53,6 +57,6 @@ h1, h2, h3 {
 }
 
 #saul {
-    max-width:100%;
-    height:auto;
+    width: 100vh;
+    height: 100vh;
 }
