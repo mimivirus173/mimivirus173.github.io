@@ -22,7 +22,7 @@ h1, h2, h3 {
 #container {
     background-color: white;
     width: 800px;
-    height: fit-content;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
 }
