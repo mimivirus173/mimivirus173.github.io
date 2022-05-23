@@ -10,16 +10,19 @@ body {
 
 #container {
     background-color: rgb(59, 35, 109);
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    color: white;
 }
 
 #main {
     padding: 10px;
+    color: white;
 }
 
 #nav {
     width: 180px;
+    color: white;
 }
 
+#tethys {
+    color: white;
+}
