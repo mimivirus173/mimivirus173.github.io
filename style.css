@@ -16,11 +16,14 @@ body {
 #main {
     padding: 10px;
     color: white;
+    width: 600px;
+    float: right;
 }
 
 #nav {
     width: 180px;
     color: white;
+    float: left;
 }
 
 #tethys {
