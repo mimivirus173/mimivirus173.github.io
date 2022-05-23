@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: rgb(125, 125, 125);
 }
 
 #header {
@@ -9,22 +9,27 @@ body {
 }
 
 #container {
-    background-color: rgb(59, 35, 109);
-    color: white;
+    background-color: white;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#main {
-    color: white;
-    width: 600px;
-    float: right;
+#content {
+    padding: 10px;
+
 }
 
 #nav {
     width: 180px;
-    color: white;
     float: left;
 }
 
-#tethys {
-    color: white;
+#main {
+    width: 600px;
+    float: right;
+}
+
+#footer {
+    clear: both;
 }
