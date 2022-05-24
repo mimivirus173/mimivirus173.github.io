@@ -12,6 +12,16 @@ h1, h2, h3 {
     margin: 0;
 }
 
+.full-screen-width {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    width: 100vw;
+  }
+
 #thisspecificword {
     font-family: 'Times New Roman', Times, serif;
 }
