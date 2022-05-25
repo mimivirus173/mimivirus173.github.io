@@ -67,6 +67,6 @@ h1, h2, h3 {
 }
 
 #saulgif {
-    width: max-content;
-    height: max-content;
+    min-width: 100%;
+    min-height: 100%;
 }
