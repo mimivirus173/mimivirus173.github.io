@@ -70,3 +70,7 @@ h1, h2, h3 {
     background-image: url(/media/saul.gif);
     background-size: cover;
 }
+
+html, body, #saul {
+    height: 100%;
+}
