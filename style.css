@@ -71,6 +71,7 @@ h1, h2, h3 {
     background-size: cover;
 }
 
-html, body, #saul {
+a.fill-div, html, body, #saul {
     height: 100%;
+    width: 100%;
 }
