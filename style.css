@@ -68,5 +68,5 @@ h1, h2, h3 {
 
 #saul {
     background-image: url(/media/saul.gif);
-    background-size: cover;
+    background-size: 100% 100%;
 }
