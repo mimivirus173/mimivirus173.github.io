@@ -144,6 +144,7 @@ body {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-duration: 3s;
+    size: 200px;
   }
   @keyframes spin {
     from { transform: rotateY(0deg); }
