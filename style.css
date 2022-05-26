@@ -131,7 +131,6 @@ table, th, td {
 
 .rainbow-text {
     background-image: repeating-linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red,violet);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation-iteration-count: infinite;
 }
