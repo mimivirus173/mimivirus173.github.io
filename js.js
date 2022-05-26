@@ -1,4 +1,4 @@
 function playMusic(){
-    var music = new Audio('vine boom.mp3');
+    var music = new Audio('media/vineboom.mp3');
     music.play();
     }
