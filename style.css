@@ -107,3 +107,7 @@ html, body, #saul {
       transform: translateX(-100%);
     }
   }
+
+table, th, td {
+   border:1px solid black;
+}
