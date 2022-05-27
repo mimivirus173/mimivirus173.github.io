@@ -149,7 +149,7 @@ body {
 /* Jupiter CSS */
 
 #jupiter-bands {
-  width: fit-content;
+  width: 100%;
 }
 
 #jupiterPole {
