@@ -150,6 +150,7 @@ body {
 
 #jupiter-bands {
   width: 100%;
+  overflow: hidden;
 }
 
 #jupiterPole {
