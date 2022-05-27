@@ -80,7 +80,7 @@ html, body, #saul {
     overflow: hidden;
 }
 
-#scroll-text {
+#scroll-text-1 {
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
