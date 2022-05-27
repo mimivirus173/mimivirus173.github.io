@@ -145,26 +145,3 @@ body {
     75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
     100% { text-shadow: 0 0 black; }
   }
-
-/* Jupiter CSS */
-
-#jupiter-bands {
-  width: 100%;
-  overflow: hidden;
-}
-
-#jupiterPole {
-  color: #777066;
-}
-
-#jupiterZone {
-  color: #C3D4DC;
-}
-
-#jupiterBelt {
-  color: #B88051;
-}
-
-#GreatRedSpot {
-  color: #CE6C37;
-}
