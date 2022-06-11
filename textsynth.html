@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+        <title>basic_seq_packet_socket::async_read_some</title>
+        <link rel="stylesheet" href="../../../boostbook.css" type="text/css">
+        <meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+        <link rel="home" href="../../../index.html" title="Asio">
+        <link rel="up" href="../basic_seq_packet_socket.html" title="basic_seq_packet_socket">
+        <link rel="prev" href="operator_gt_.html" title="basic_seq_packet_socket::operator&gt;">
+        <link rel="next" href="async_write_some.html" title="basic_seq_packet_socket::async_write_some">
+    </head>
+    <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+        <table cellpadding="2" width="100%"><tr><td valign="top"><img alt="asio C++ library" width="250" height="60" src="../../../asio.png"></td></tr></table>
+        <hr>
+        <div class="spirit-nav">
+            <a accesskey="p" href="operator_gt_.html"><img src="../../../prev.png" alt="Prev"></a><a accesskey="u" href="../basic_seq_packet_socket.html"><img src="../../../up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../home.png" alt="Home"></a><a accesskey="n" href="async_write_some.html"><img src="../../../next.png" alt="Next"></a>
+        </div>
+        <div class="section">
+        <div class="titlepage"><div><div><h4 class="title">
+            <a name="asio.reference.basic_seq_packet_socket.async_read_some"></a><a class="link" href="async_read_some.html" title="basic_seq_packet_socket::async_read_some">basic_seq_packet_socket::async_read_some</a>
+</h4></div></div></div>
+<p>
+          <a class="indexterm" name="asio.indexterm.basic_seq_packet_socket.async_read_some"></a> 
+Async
+          read some data from the peer.
+        </p>
+<pre class="programlisting">template&lt;
+    typename <a class="link" href="../../Protocol.html" title="Protocol requirements">Protocol1</a>,
+    typename <a class="link" href="../../IOControlCommand.html" title="IOControlCommand">IOControlCommand</a>&gt;
+std::size_t <a class="link" href="async_read_some.html" title="basic_seq_packet_socket::async_read_some"><span class="emphasis"><em>async_read_some</em></span></a>(
+    basic_seq_packet_socket&lt; Protocol1,
+        SocketService, Socket> &amp; peer,
+    <a class="link" href="../../basic_stream_socket.html" title="basic_stream_socket"><span class="emphasis"><em>first</em></span></a> protocol,
+    asio::error_code &amp; <a class="link" href="../../optional/optional.html#asio.reference.optional.value_type"><span class="emphasis"><em>ec</em></span></a>,
+    <a class="link" href="../../basic_stream_socket.html" title="basic_stream_socket"><span class="emphasis"><em>*</em></span></a> buffers,
+    std::size_t <a class="link" href="../../asio/error.html" title="asio::error"><span class="emphasis"><em>max_bytes_to_read</em></span></a>);
+  <span class="emphasis"><em><span class="special">*</span></em></span> <a class="link" href="async_read_some.html" title="basic_seq_packet_socket::async_read_some"><span class="emphasis"><em>async_read_some</em></span></a>(
+    basic_seq_packet_socket&lt; Protocol1,
+        SocketService, Socket &gt; &amp; peer,
+    <a class="link" href="../../basic_stream_socket.html" title="basic_stream_socket"><span class="emphasis"><em>first</em></span></a> protocol,
+    asio::error_code &amp; <a class="link" href="../../optional/optional.html#asio.reference.optional.value_type"><span class="emphasis"><em>ec</em></span></a>,
+    <a class="link" href="../../basic_stream_socket.html" title="basic_stream_socket"><span class="emphasis"><em>*</em></span></a> buffers,
+    std::size_t <a class="link" href="../../asio/error.html" title="asio::error"><span class="emphasis"><em>max_bytes_to_read</em></span></a>);
+  <span class="emphasis"><em><span class="special">*</span></em></span> <a class="link" href="async_read_some.html" title="basic_seq_packet_socket::async_read_some"><span class="emphasis"><em>async_read_some</em></span></a>(
+    basic_seq_packet_socket&lt; Protocol1,
+        SocketService, Socket &gt; &amp; peer,
+    <a class="link" href="../../basic_stream_socket.html" title="basic_stream_socket"><span class="emphasis"><em>first</em></span></a> protocol,
+    asio::error_code &amp; <a class="link" href="../../optional/optional.html#asio.reference.optional.value_type"><span class="emphasis"><em>ec</em></span></a>,
+    <a class="link" href="../../basic_stream_socket.html" title="basic_stream_socket"><span class="emphasis"><em>*</em></span></a> buffers,
+    std::size_t <a class="link" href="../../asio/error.html" title="asio::error"><span class="emphasis"><em>max_bytes_to_read</em></span></a>);
+</pre>
+<p>
+          The <code class="computeroutput">async_read_some</code> function is used to asynchronously read a certain
+          number of bytes of data from a stream socket. The function call always returns
+          immediately. The asynchronous operation will continue until one of the following
+          conditions is true:
+        </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+              The completion_condition function object returns 0.
+            </li>
+<li class="listitem">
+              An error occurred.
+            </li>
+</ul></div>
+<p>
+          This operation is implemented in terms of zero or more calls to the stream's
+          async_read_some function. When the <code class="computeroutput">asio::error::eof</code>
+          error code is returned, this function completes immediately, indicating the
+          end of the stream.
+               Otherwise, the <code class="computeroutput">asio::error::eof</code> error code and
+          the bytes transferred are provided.
+        </p>
+<p>
+          This function is used internally as the completion function for the
+          <a class="link" href="../../asio/basic_stream_socket.html" title="basic_stream_socket"><code class="computeroutput">basic_stream_socket</code></a>
+          class of asynchronous operations.
+        </p>
+<h6>
+<a name="asio.reference.basic_seq_packet_socket.async_read_some.h0"></a>
+           <span><a name="asio.reference.basic_seq_packet_socket.async_read_some.member_functions"></a></span><a class="link" href="async_read_some.html#asio.reference.basic_seq_packet_socket.async_read_some.member_functions">Member
+          Functions</a>
+        </h6>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    Name
+                   </p>
+                </th>
+<th>
+                  <p>
+                    Description
+                  </p>
+                </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                  <p>
+                    <a class="link" href="async_read_some/overload1.html" title="basic_seq_packet_socket::async_read_some (1 of 3 overloads)">async_read_some</a>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Start an asynchronous operation to read a certain amount of data from
+                    the stream socket.
+                  </p>
+<p>
+                                This function is used to asynchronously read data from the stream
+                    socket. The function call always returns immediately.
+                    The asynchronous operation will continue until one of the following
+                    conditions is true:
+                  </p>
+<ol type="1">
+<li>
+                    The supplied buffers are full. That is, the bytes transferred is equal
+                                      to the sum of the buffer sizes.
+                  </li>
+<li>
+                    An error occurred.
+                  </li>
+</ol>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <a class="link" href="async_read_some/overload2.html" title="basic_seq_packet_socket::async_read_some (2 of 3 overloads)">async_read_some</a>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Start an asynchronous operation to read a certain amount of data from
+                    the stream socket.
+                  </p>
+<p>
+                    This function is used to as
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
