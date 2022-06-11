@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MVC App</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="app">
+        <div ng-controller="Controller as controller">
+            <div ng-repeat="product in controller.products">
+                <h1>{{product.name}}</h1>
+                <div ng-repeat="option in product.options">
+                    <h2>{{option.name}}</h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Hadoop</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+        <script src="/resources/test.js"></script>
+        <script type="text/x-handlebars">
+            {{#view "hello"}}
+                {{greeting}}
+            {{/view}}
+          </script>
+    </head>
+    <body>
+        <h1>Hadoop:</h1>
+        <p>{{yarn.home}}</p>
+        <h2>App:</h2>
+        <p>{{state.master.name}}</p>
+    </body>
+</html>
