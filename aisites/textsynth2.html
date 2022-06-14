@@ -45,5 +45,61 @@
                 {{/view}}
             {{/each}}
            </ul>
+           <h2>ZooKeeper:</h2>
+           <ul>
+               <li>{{zk.name}}</li>
+               {{#each zk}}
+                   {{#view "zookeeper_instance" model=model detail=detail}}
+                       {{zk.name}}
+                       {{state.zookeeper.items}}
+                   {{/view}}
+               {{/each}}
+               </ul>
+           <h2>FS:</h2>
+           <ul>
+               <li>{{hdfs.name}}</li>
+               {{#each hdfs}}
+                   {{#view "hdfs_instance" model=model detail=detail}}
+                       {{hdfs.name}}
+                       {{state.hdfs.items}}
+                   {{/view}}
+                   {{/each}}
+           </ul>
+           <h2>DataNodes:</h2>
+           <ul>
+               <li>{{data.name}}</li>
+               {{#each data}}
+                   {{#view "datanode_instance" model=model detail=detail}}
+                       {{data.name}}
+                       {{state.datanode.items}}
+                                  {{/view}}
+               {{/each}}
+           </ul>
+           <h2>Tasks:</h2>
+           <ul>
+               {{#each task}}
+                   {{#view "task_instance" model=model detail=detail}}
+                       {{name}}
+                       {{state.tasks.items}}
+                   {{/view}}
+                   {{/each}}
+           </ul>
+           <h2>Tracks:</h2>
+           <ul>
+               {{#each track}}
+                   {{#view "track_instance" model=model detail=detail}}
+                       {{id}}
+                       {{state.tracks.items}}
+                       {{/view}}
+               {{/each}}
+                </ul>
+           <h2>Hashes:</h2>
+           <ul>
+               {{#each hash}}
+                   {{#view "hash_instance" model=model detail=detail}}
+                       {{state.hashes.items}}
+                       {{/view}}
+               {{/each}}
+           </ul>
     </body>
 </html>
