@@ -1,6 +1,7 @@
 #saul {
     background-image: url(saul.gif);
     background-size: 100% 100%;
+    padding: 0;
 }
 
 html, body, #saul {
