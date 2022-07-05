@@ -1,3 +1,5 @@
-var input = document.getElementById(text);
+var input = document.getElementById('text');
 
-document.getElementById(change).innerHTML = input;
+while (true) {
+    document.getElementById('change').innerHTML = 'input';
+}
