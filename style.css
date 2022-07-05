@@ -50,6 +50,10 @@ h1, h2, h3 {
     float: left;
 }
 
+#navHeader {
+    margin-bottom: 10px;
+}
+
 #nav .selected {
     font-weight: bold;
 }
