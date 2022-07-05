@@ -53,6 +53,10 @@ h1, h2, h3 {
 #navHeader {
     margin-bottom: 10px;
 }
+.navHeaders {
+    margin-bottom: 75%;
+    size: 75%;
+}
 
 #nav .selected {
     font-weight: bold;
