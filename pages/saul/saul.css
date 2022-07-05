@@ -1,11 +1,10 @@
 #saul {
     background-image: url(saul.gif);
     background-size: 100% 100%;
-    padding: 0px;
 }
 
 html, body, #saul {
     height: 100%;
     width: 100%;
-    padding: 0;
+    margin: 0px;
 }
