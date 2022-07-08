@@ -1,3 +1,11 @@
-var input = document.getElementById('text');
+let textInput;
 
-document.getElementById('change').innerHTML = 'input';
+function func()
+{
+    textInput = document.getElementById("input").value;
+    document.getElementById("output").innerHTML = textInput;
+}
+
+while (true) {
+    func();
+}
