@@ -1,11 +1,10 @@
 let textInput;
 
-function func()
-{
-    textInput = document.getElementById("input").value;
-    document.getElementById("output").innerHTML = textInput;
-}
-
-while (true) {
-    func();
+function update() {
+    textInput = document.getElementById('input').value;
+    if (textInput == '')  {
+        document.getElementById('output').innerHTML = "Input text above";
+    } else {
+        document.getElementById('output').innerHTML = textInput;
+    }
 }
