@@ -1,6 +1,6 @@
 // script.js
 var app = angular.module("app", ["ngRoute"]);
-app.controller("Controller", function($scope) {
+app.controller("Controller", function ($scope) {
     $scope.products = [
         {
             "name": "Cupcake",
@@ -18,10 +18,10 @@ app.controller("Controller", function($scope) {
                 { "name": "Cupcake" }
             ]
         }
-        ];
+    ];
 });
 
-app.config(function($routeProvider) {
+app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             template: "<h1>Main Page</h1><p>{{$location.path()}}</p>"

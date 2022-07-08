@@ -1,105 +1,108 @@
 <html>
-    <head>
-        <title>Hadoop</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-        <script src="/resources/test.js"></script>
-        <script type="text/x-handlebars">
+
+<head>
+    <title>Hadoop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="/resources/test.js"></script>
+    <script type="text/x-handlebars">
             {{#view "hello"}}
                 {{greeting}}
             {{/view}}
           </script>
-    </head>
-    <body>
-        <h1>Hadoop:</h1>
-        <p>{{yarn.home}}</p>
-        <h2>App:</h2>
-        <p>{{state.master.name}}</p>
-        <h2>Jobs:</h2>
-        <ul>
-            <li>{{state.jobs.size}}</li>
-            {{#each jobs}}
-                {{#view "job_instance" model=model detail=detail}}
-                    {{job_name}}
-                    {{state.jobs.items}}
-                {{/view}}
-            {{/each}}
-        </ul>
-        <h2>Nodes:</h2>
-        <ul>
-            <li>{{node.name}}</li>
-            {{#each node}}
-                {{#view "node_instance" model=model detail=detail}}
-                    {{name}}
-                    {{state.node.items}}
-                {{/view}}
-            {{/each}}
-        </ul>
-        <h2>Namenodes:</h2>
-        <ul>
-            <li>{{namenode.name}}</li>
-            {{#each namenode}}
-                {{#view "namenode_instance" model=model detail=detail}}
-                    {{name}}
-                    {{state.namenode.items}}
-                {{/view}}
-            {{/each}}
-           </ul>
-           <h2>ZooKeeper:</h2>
-           <ul>
-               <li>{{zk.name}}</li>
-               {{#each zk}}
-                   {{#view "zookeeper_instance" model=model detail=detail}}
-                       {{zk.name}}
-                       {{state.zookeeper.items}}
-                   {{/view}}
-               {{/each}}
-               </ul>
-           <h2>FS:</h2>
-           <ul>
-               <li>{{hdfs.name}}</li>
-               {{#each hdfs}}
-                   {{#view "hdfs_instance" model=model detail=detail}}
-                       {{hdfs.name}}
-                       {{state.hdfs.items}}
-                   {{/view}}
-                   {{/each}}
-           </ul>
-           <h2>DataNodes:</h2>
-           <ul>
-               <li>{{data.name}}</li>
-               {{#each data}}
-                   {{#view "datanode_instance" model=model detail=detail}}
-                       {{data.name}}
-                       {{state.datanode.items}}
-                                  {{/view}}
-               {{/each}}
-           </ul>
-           <h2>Tasks:</h2>
-           <ul>
-               {{#each task}}
-                   {{#view "task_instance" model=model detail=detail}}
-                       {{name}}
-                       {{state.tasks.items}}
-                   {{/view}}
-                   {{/each}}
-           </ul>
-           <h2>Tracks:</h2>
-           <ul>
-               {{#each track}}
-                   {{#view "track_instance" model=model detail=detail}}
-                       {{id}}
-                       {{state.tracks.items}}
-                       {{/view}}
-               {{/each}}
-                </ul>
-           <h2>Hashes:</h2>
-           <ul>
-               {{#each hash}}
-                   {{#view "hash_instance" model=model detail=detail}}
-                       {{state.hashes.items}}
-                       {{/view}}
-               {{/each}}
-           </ul>
-    </body>
+</head>
+
+<body>
+    <h1>Hadoop:</h1>
+    <p>{{yarn.home}}</p>
+    <h2>App:</h2>
+    <p>{{state.master.name}}</p>
+    <h2>Jobs:</h2>
+    <ul>
+        <li>{{state.jobs.size}}</li>
+        {{#each jobs}}
+        {{#view "job_instance" model=model detail=detail}}
+        {{job_name}}
+        {{state.jobs.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+    <h2>Nodes:</h2>
+    <ul>
+        <li>{{node.name}}</li>
+        {{#each node}}
+        {{#view "node_instance" model=model detail=detail}}
+        {{name}}
+        {{state.node.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+    <h2>Namenodes:</h2>
+    <ul>
+        <li>{{namenode.name}}</li>
+        {{#each namenode}}
+        {{#view "namenode_instance" model=model detail=detail}}
+        {{name}}
+        {{state.namenode.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+    <h2>ZooKeeper:</h2>
+    <ul>
+        <li>{{zk.name}}</li>
+        {{#each zk}}
+        {{#view "zookeeper_instance" model=model detail=detail}}
+        {{zk.name}}
+        {{state.zookeeper.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+    <h2>FS:</h2>
+    <ul>
+        <li>{{hdfs.name}}</li>
+        {{#each hdfs}}
+        {{#view "hdfs_instance" model=model detail=detail}}
+        {{hdfs.name}}
+        {{state.hdfs.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+    <h2>DataNodes:</h2>
+    <ul>
+        <li>{{data.name}}</li>
+        {{#each data}}
+        {{#view "datanode_instance" model=model detail=detail}}
+        {{data.name}}
+        {{state.datanode.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+    <h2>Tasks:</h2>
+    <ul>
+        {{#each task}}
+        {{#view "task_instance" model=model detail=detail}}
+        {{name}}
+        {{state.tasks.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+    <h2>Tracks:</h2>
+    <ul>
+        {{#each track}}
+        {{#view "track_instance" model=model detail=detail}}
+        {{id}}
+        {{state.tracks.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+    <h2>Hashes:</h2>
+    <ul>
+        {{#each hash}}
+        {{#view "hash_instance" model=model detail=detail}}
+        {{state.hashes.items}}
+        {{/view}}
+        {{/each}}
+    </ul>
+</body>
+
 </html>
