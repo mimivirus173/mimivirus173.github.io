@@ -2,3 +2,9 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     color: black;
 }
+
+#footer {
+    clear: both;
+    padding: 10px;
+    text-align: right;
+}
