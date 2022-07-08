@@ -3,6 +3,11 @@ body {
     color: black;
 }
 
+#container {
+    margin: 0 auto;
+    text-align: center;
+}
+
 #footer {
     clear: both;
     bottom: 0px;
