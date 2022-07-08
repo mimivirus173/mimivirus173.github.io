@@ -23,6 +23,8 @@ button:hover {
 
 #footer {
     clear: both;
+    bottom: 0px;
     padding: 10px;
     text-align: right;
+    position: absolute;
 }
