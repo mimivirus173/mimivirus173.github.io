@@ -48,6 +48,7 @@ h1, h2, h3 {
 #nav {
     width: 180px;
     float: left;
+    font-size: 80%;
 }
 
 #navHeader {
