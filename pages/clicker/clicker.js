@@ -1,13 +1,16 @@
 let points = 0;
 let power = 1;
 
+setInterval(() => {
+    document.getElementById('pointCount').innerHTML = points;
+}, 50)
+
 function increment() {
     points += power;
-    document.getElementById('pointCount').innerHTML = points;
 }
 
 function powUp() {
-    power += 1;
+    power++;
     document.getElementById('clickPower').innerHTML = power;
 }
 
@@ -18,5 +21,5 @@ function idleOn() {
 }
 
 function idlePoints() {
-    points += 1
+    points++
 }
