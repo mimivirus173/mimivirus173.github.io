@@ -51,46 +51,49 @@ table, th, td {
 }
 
 .rainbow-text {
-    font-size: 1.5rem;
-    display: inline-block;
-    margin-top: 1rem;
-    text-shadow: 2px 2px 4px #000000;
-    -webkit-animation: rainbow 5s infinite; 
-  }
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-top: 1rem;
+  text-shadow: 2px 2px 4px #000000;
+  -webkit-animation: rainbow 5s infinite; 
+}
 
-  @-webkit-keyframes rainbow{
-    0%{color: orange;}  
-    10%{color: purple;} 
-    20%{color: red;}
-    30%{color: CadetBlue;}
-    40%{color: yellow;}
-    50%{color: coral;}
-    60%{color: green;}
-    70%{color: cyan;}
-    80%{color: DeepPink;}
-    90%{color: DodgerBlue;}
-    100%{color: orange;}
-  }
+@-webkit-keyframes rainbow{
+  0%{color: orange;}  
+  10%{color: purple;} 
+  20%{color: red;}
+  30%{color: CadetBlue;}
+  40%{color: yellow;}
+  50%{color: coral;}
+  60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+  100%{color: orange;}
+}
   
 
 body {
     perspective: 500px;
-  }
-  #spinner {
-    text-align: center;
-    animation-name: spin, depth;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 3s;
-  }
-  @keyframes spin {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(-360deg); }
-  }
-  @keyframes depth {
-    0% { text-shadow: 0 0 black; }
-    25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
-    50% { text-shadow: 0 0 black; }
-    75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
-    100% { text-shadow: 0 0 black; }
-  }
+}
+
+.spinner {
+  text-align: center;
+  animation-name: spin, depth;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(-360deg); }
+}
+
+@keyframes depth {
+  0% { text-shadow: 0 0 black; }
+  25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+  50% { text-shadow: 0 0 black; }
+  75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+  100% { text-shadow: 0 0 black; }
+}
