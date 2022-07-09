@@ -35,7 +35,7 @@ button:hover {
 }
 
 button:active {
-    padding: 10px 28px;
+    background-color: rgb(255, 133, 88);
 }
 
 button {
