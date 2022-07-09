@@ -3,6 +3,11 @@ let power = 1;
 
 setInterval(() => {
     document.getElementById('pointCount').innerHTML = points;
+    if (points <= 49) {
+        document.getElementById('passive').disabled = true
+    } else {
+    document.getElementById('passive').disabled = false
+    }
 }, 50)
 
 function increment() {
