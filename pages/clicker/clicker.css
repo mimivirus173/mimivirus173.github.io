@@ -52,3 +52,7 @@ button {
         padding: 15px 32px;
     }
 }
+
+button:disabled {
+    background-color: rgb(255, 201, 181);;
+}

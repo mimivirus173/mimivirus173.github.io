@@ -18,6 +18,7 @@ function idleOn() {
     idlePoints();
     setInterval(idlePoints, 2000);
     document.getElementById('idleOn').innerHTML = "True"
+    document.getElementById('passive').disabled = true;
 }
 
 function idlePoints() {
