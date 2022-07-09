@@ -20,10 +20,12 @@
                 <button id="increment" onclick="increment()" title="Click me!">+1</button>
                 <p>Current points: <span id="pointCount">0</span></p>
                 <p>Clicking power level: <span id="clickPower">1</span></p>
+                <p>Passive income: <span id="idleOn">False</span></p>
             </div>
             <div id="shop">
                 <h3>Shop:</h3>
-                <button id="double" onclick="double()" title="Upgrades the clicks">Upgrade</button>
+                <button id="double" onclick="powUp()" title="Upgrades the clicks">Upgrade Power</button>
+                <button id="passive" onclick="idleOn()" title="Generates passive points">Activate passive income</button>
             </div>
             <div id="footer">
                 <a href="../../index.html">Back to homepage</a>
