@@ -5,7 +5,7 @@ function playMusic(){
 
 function speedTethys(){
     var image = document.getElementById('Tethys');
-
+    
     if (image.src.match("media/Tethys.gif")) {
         image.src = "media/FastTethys.gif"
         document.getElementById('tethysButton').innerHTML = "Slow down"
@@ -13,4 +13,4 @@ function speedTethys(){
         image.src = "media/Tethys.gif"
         document.getElementById('tethysButton').innerHTML = "Speed up"
     }
-  };
+};
