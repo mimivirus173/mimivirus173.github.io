@@ -21,4 +21,4 @@ function timer(){
         sec--;
         document.getElementById('timer').innerHTML = sec;
     }, 1000);
-}
+} 
