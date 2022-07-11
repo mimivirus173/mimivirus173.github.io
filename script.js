@@ -17,11 +17,8 @@ function speedTethys(){
 
 function timer(){
     var sec = 3;
-    var timer = setInterval(function(){
-        document.getElementById('timer').innerHTML = sec;
+    var secCount = setInterval(function(){
         sec--;
-        if (sec < 0) {
-            clearInterval(timer);
-        }
+        document.getElementById('timer').innerHTML = sec;
     }, 1000);
 }
