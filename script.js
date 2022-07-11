@@ -13,4 +13,15 @@ function speedTethys(){
         image.src = "media/Tethys.gif"
         document.getElementById('tethysButton').innerHTML = "Speed up"
     }
-};
+}
+
+function timer(){
+    var sec = 3;
+    var timer = setInterval(function(){
+        document.getElementById('timer').innerHTML = sec;
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
