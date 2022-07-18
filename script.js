@@ -19,6 +19,10 @@ function timer(){
     var sec = 3;
     var secCount = setInterval(function(){
         sec--;
-        document.getElementById('timer').innerHTML = sec;
+        if (sec < 0) {
+            document.getElementById('timer').innerHTML = "0";
+        } else {
+            document.getElementById('timer').innerHTML = sec;
+        }
     }, 1000);
 } 
