@@ -56,3 +56,9 @@ button {
 button:disabled {
     background-color: rgb(255, 201, 181);;
 }
+
+#lightswitch {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
