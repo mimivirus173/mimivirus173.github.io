@@ -42,7 +42,7 @@ function lightswitch() {
         // Update label
         document.getElementById('light').innerHTML = "On";
         // Play sound
-        lightOn.play();
+        lightOff.play();
         // Edit CSS
         document.querySelector('body').style.backgroundColor = "black";
         document.querySelector('div').style.color = "white";
@@ -51,7 +51,7 @@ function lightswitch() {
         // Update label
         document.getElementById('light').innerHTML = "Off";
         // Play sound
-        lightOff.play();
+        lightOn.play();
         // Edit CSS
         document.querySelector('body').style.backgroundColor = "white";
         document.querySelector('div').style.color = "black";
