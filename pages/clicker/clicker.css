@@ -17,7 +17,7 @@ body {
 }
 
 button {
-    background-color: coral;
+    background-color: #ff7f50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -54,11 +54,13 @@ button {
 }
 
 button:disabled {
-    background-color: rgb(255, 201, 181);;
+    background-color: rgb(255, 190, 167);;
 }
 
 #lightswitch {
     position: absolute;
     top: 6px;
     left: 6px;
+    font-size: 75%;
+    padding: 11.25px 24px;
 }
