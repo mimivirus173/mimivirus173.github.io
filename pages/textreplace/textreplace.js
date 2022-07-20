@@ -3,9 +3,9 @@ let textInput;
 function update() {
     textInput = document.getElementById('input').value;
     if (textInput == '')  {
-        document.getElementsByClassName('output').innerHTML = "Text";
+        document.getElementById('output').innerHTML = "Text";
     } else {
-        document.getElementsByClassName('output').innerHTML = textInput;
+        document.getElementById('output').innerHTML = textInput;
     }
 }
 

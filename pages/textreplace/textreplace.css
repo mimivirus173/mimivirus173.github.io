@@ -28,7 +28,7 @@ h2 {
     position: absolute;
 }
 
-.output {
+#output {
     text-align: center;
     animation-name: spin, depth;
     animation-timing-function: linear;
