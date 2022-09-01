@@ -10,11 +10,6 @@ let idleInterval;
 var idleCheck = document.getElementById('idleOn');
 var lightStatus = document.getElementById('light');
 
-// Sound variables
-var lightOn = new Audio('media/lightOn.mp3');
-var lightOff = new Audio('media/lightOff.mp3');
-// (doesn't work fsr) var tick = new Audio('media/tick.mp3');
-
 //// Functions
 
 // Checks for costs
@@ -42,6 +37,7 @@ function lightswitch() {
         // Update label
         document.getElementById('light').innerHTML = "On";
         // Play sound
+        var lightOff = new Audio('media/lightOff.mp3');
         lightOff.play();
         // Edit CSS
         document.querySelector('body').style.backgroundColor = "black";
@@ -51,6 +47,7 @@ function lightswitch() {
         // Update label
         document.getElementById('light').innerHTML = "Off";
         // Play sound
+        var lightOn = new Audio('media/lightOn.mp3');
         lightOn.play();
         // Edit CSS
         document.querySelector('body').style.backgroundColor = "white";
