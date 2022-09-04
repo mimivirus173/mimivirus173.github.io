@@ -4,6 +4,7 @@
 let points = 0;
 let power = 1;
 let idleGain = 0;
+
 let powerCost;
 let idleCost;
 
@@ -15,15 +16,16 @@ var lightStatus = document.getElementById('light');
 
 // Checks for costs
 function check() {
-    powerCost = (10 * power) * power;
     
+    powerCost = (5 * power) * power;
+
     if (points < powerCost) {
         document.getElementById('double').disabled = true;
     } else {
         document.getElementById('double').disabled = false;
     }
 
-    idleCost = 10 + (20 * idleGain) * idleGain;
+    idleCost = 25 + (25 * idleGain) * idleGain;
 
     if (points < idleCost) {
         document.getElementById('passive').disabled = true;
@@ -38,6 +40,7 @@ setInterval(check, 10);
 // ik that the lightswitch soundfile names are swapped, the sounds are swapped when they're named correctly
 function lightswitch() {
     if(lightStatus.innerHTML == "Off") {
+        
         // Update label
         document.getElementById('light').innerHTML = "On";
         
@@ -49,7 +52,9 @@ function lightswitch() {
         document.querySelector('body').style.backgroundColor = "black";
         document.querySelector('div').style.color = "white";
         document.querySelector('a').style.color = "#B200FF";
+
     } else if (lightStatus.innerHTML == "On") {
+        
         // Update label
         document.getElementById('light').innerHTML = "Off";
         
@@ -66,13 +71,16 @@ function lightswitch() {
 
 /// Shop functions
 
-// Updates point count
+// Updates counts
 setInterval(() => {
     document.getElementById('pointCount').innerHTML = points;
+    document.getElementById('powerCost').innerHTML = powerCost;
+    document.getElementById('idleCost').innerHTML = idleCost;
 }, 50)
 
 // Adds points
 function add() {
+    
     // Play sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
@@ -83,6 +91,7 @@ function add() {
 
 // Increases power
 function powUp() {
+   
     // Plays sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
@@ -95,19 +104,15 @@ function powUp() {
     points -= powerCost;
 }
 
-// Activates passive income
+// Passive income
 function idleUp() {
+   
     // Plays sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
     
-    // Idles points
-    idleInterval = 1000;
-    idlePoints();
-    setInterval(idlePoints, idleInterval);
-    
     // Deducts points & updates label
-    points -= 10;
+    points -= idleCost;
     idleGain++
     document.getElementById('idlePower').innerHTML = idleGain;
 }
@@ -115,3 +120,5 @@ function idleUp() {
 function idlePoints() {
     points += idleGain
 }
+
+setInterval(idlePoints, 1000);
