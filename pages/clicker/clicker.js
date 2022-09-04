@@ -3,21 +3,21 @@
 // Updating variables
 let points = 0;
 let power = 1;
-let idleGain = 0;
+let idleInterval = 1000;
+let idleCostBase = 1;
 
 let powerCost;
 let idleCost;
 
 // HTML variables
-var idleCheck = document.getElementById('idleOn');
 var lightStatus = document.getElementById('light');
 
 //// Functions
 
 // Checks for costs
-function check() {
+function checkCost() {
     
-    powerCost = (5 * power) * power;
+    powerCost = (10 * power) * power;
 
     if (points < powerCost) {
         document.getElementById('double').disabled = true;
@@ -25,7 +25,7 @@ function check() {
         document.getElementById('double').disabled = false;
     }
 
-    idleCost = 25 + (25 * idleGain) * idleGain;
+    idleCost = (5 * idleCostBase) * idleCostBase;
 
     if (points < idleCost) {
         document.getElementById('passive').disabled = true;
@@ -34,7 +34,7 @@ function check() {
     }
 }
 
-setInterval(check, 10);
+setInterval(checkCost, 10);
 
 // Lightswitch function
 // ik that the lightswitch soundfile names are swapped, the sounds are swapped when they're named correctly
@@ -76,7 +76,10 @@ setInterval(() => {
     document.getElementById('pointCount').innerHTML = points;
     document.getElementById('powerCost').innerHTML = powerCost;
     document.getElementById('idleCost').innerHTML = idleCost;
-}, 50)
+
+    document.getElementById('idleInterval').innerHTML = idleInterval;
+    document.getElementById('clickPower').innerHTML = power;
+}, 5)
 
 // Adds points
 function add() {
@@ -96,9 +99,8 @@ function powUp() {
     var tick = new Audio('media/tick.mp3');
     tick.play();
     
-    // Increases power & updates label
+    // Upgrades power
     power++;
-    document.getElementById('clickPower').innerHTML = power;
     
     // Deducts points
     points -= powerCost;
@@ -111,14 +113,13 @@ function idleUp() {
     var tick = new Audio('media/tick.mp3');
     tick.play();
     
-    // Deducts points & updates label
+    // Deducts points & sets interval
     points -= idleCost;
-    idleGain++
-    document.getElementById('idlePower').innerHTML = idleGain;
+    idleInterval * 0.75;
+    idleCostBase++;
+    setInterval(idlePoints, idleInterval);
 }
 
 function idlePoints() {
-    points += idleGain
+    points++;
 }
-
-setInterval(idlePoints, 1000);
