@@ -3,8 +3,9 @@
 // Updating variables
 let points = 0;
 let power = 1;
+let idleGain = 0;
 let powerCost;
-let idleInterval;
+let idleCost;
 
 // HTML variables
 var idleCheck = document.getElementById('idleOn');
@@ -22,7 +23,9 @@ function check() {
         document.getElementById('double').disabled = false;
     }
 
-    if (points <= 49 || idleCheck.innerHTML == "True") {
+    idleCost = 10 + (20 * idleGain) * idleGain;
+
+    if (points < idleCost) {
         document.getElementById('passive').disabled = true;
     } else {
     document.getElementById('passive').disabled = false;
@@ -32,13 +35,16 @@ function check() {
 setInterval(check, 10);
 
 // Lightswitch function
+// ik that the lightswitch soundfile names are swapped, the sounds are swapped when they're named correctly
 function lightswitch() {
     if(lightStatus.innerHTML == "Off") {
         // Update label
         document.getElementById('light').innerHTML = "On";
+        
         // Play sound
-        var lightOff = new Audio('media/lightOff.mp3');
+        var lightOff = new Audio('media/lightOn.mp3');
         lightOff.play();
+
         // Edit CSS
         document.querySelector('body').style.backgroundColor = "black";
         document.querySelector('div').style.color = "white";
@@ -46,9 +52,11 @@ function lightswitch() {
     } else if (lightStatus.innerHTML == "On") {
         // Update label
         document.getElementById('light').innerHTML = "Off";
+        
         // Play sound
-        var lightOn = new Audio('media/lightOn.mp3');
+        var lightOn = new Audio('media/lightOff.mp3');
         lightOn.play();
+        
         // Edit CSS
         document.querySelector('body').style.backgroundColor = "white";
         document.querySelector('div').style.color = "black";
@@ -68,6 +76,7 @@ function add() {
     // Play sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
+    
     // Add points
     points += power;
 }
@@ -77,27 +86,32 @@ function powUp() {
     // Plays sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
+    
     // Increases power & updates label
     power++;
     document.getElementById('clickPower').innerHTML = power;
+    
     // Deducts points
     points -= powerCost;
 }
 
 // Activates passive income
-function idleOn() {
+function idleUp() {
     // Plays sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
+    
     // Idles points
     idleInterval = 1000;
     idlePoints();
     setInterval(idlePoints, idleInterval);
+    
     // Deducts points & updates label
-    points -= 50;
-    document.getElementById('idleOn').innerHTML = "True"
+    points -= 10;
+    idleGain++
+    document.getElementById('idlePower').innerHTML = idleGain;
 }
 
 function idlePoints() {
-    points++
+    points += idleGain
 }
