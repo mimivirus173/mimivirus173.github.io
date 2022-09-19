@@ -74,6 +74,11 @@ h1, h2, h3 {
     text-align: right;
 }
 
+#sus {
+    text-decoration: none;
+    color: black;
+}
+
 /* Tethys */
 #tethysButton {
     background-color: rgb(202, 202, 202);
