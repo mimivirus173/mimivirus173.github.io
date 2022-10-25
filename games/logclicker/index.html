@@ -6,7 +6,6 @@
     <title>LogClicker</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" href="media/tethys.ico" type="image/x-icon">
-    <script type="text/javascript" src="script.js"></script>
     <!--METADATA-->
     <meta charset="UTF-8">
     <meta name="description" content="clicker about the log(x) function">
@@ -16,7 +15,23 @@
 </head>
 
 <body>
-    <p>stuff will be put here soon</p>
+    <div id="container">
+        <div id="main">
+            <h1>LogClicker</h1>
+            
+            <button id="increment" onclick="log()" title="Click me!">Increase</button>
+            <button id="lightswitch" onclick="lightswitch()" title="A lightswitch">Dark mode: <span id="light">Off</span></button>
+            
+            <p>Log: <span id="number">0</span></p>
+            <p>Clicks: <span id="clicks">0</span></p>
+        </div>
+        
+        <div id="footer">
+            <a href="../../index.html" class="nonButton">Back to homepage</a>
+        </div>
+        
+        <script type="text/javascript" src="script.js"></script>
+    </div>
 </body>
 
 </html>

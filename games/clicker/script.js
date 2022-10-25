@@ -83,7 +83,6 @@ setInterval(() => {
 
 // Adds points
 function add() {
-    
     // Play sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
@@ -94,7 +93,6 @@ function add() {
 
 // Increases power
 function powUp() {
-   
     // Plays sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
@@ -108,7 +106,6 @@ function powUp() {
 
 // Passive income
 function idleUp() {
-   
     // Plays sound
     var tick = new Audio('media/tick.mp3');
     tick.play();
