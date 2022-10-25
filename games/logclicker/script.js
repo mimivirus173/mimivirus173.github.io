@@ -18,7 +18,7 @@ setInterval(() => {
     document.getElementById('clicks').innerHTML = clicks;
 }, 5)
 
-/// Increment functions
+/// Increment
 
 function log() {
     // Play sound
@@ -28,6 +28,20 @@ function log() {
     // Change variables
     clicks++;
     number = Math.log10(clicks);
+}
+
+/// Decrement
+
+function dec() {
+    // Play sound
+    var tick = new Audio('media/tick.mp3');
+    tick.play();
+    
+    // Change variables
+    if(clicks > 1) {
+        clicks--;
+        number = Math.log10(clicks);
+    }
 }
 
 /// Lightswitch function
