@@ -59,8 +59,11 @@ button:disabled {
 
 #settings {
     position: absolute;
-    size: 75%;
     top: 6px;
     left: 6px;
     font-size: 75%;
+}
+
+#logText {
+    font-family: monospace, monospace;
 }
