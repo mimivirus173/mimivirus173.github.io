@@ -118,5 +118,5 @@ function idleUp() {
 }
 
 function idlePoints() {
-    points++;
+    points += power;
 }
