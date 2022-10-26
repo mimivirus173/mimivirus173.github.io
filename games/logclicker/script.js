@@ -3,9 +3,11 @@
 /// Game variables
 let clicks = 0;
 let number = 0;
+let autoInterval = 5;
 
 /// HTML Variables
 var lightStatus = document.getElementById('light');
+var autoStatus = document.getElementById('autoCheck');
 
 ///// Functions
 
@@ -16,6 +18,9 @@ var lightStatus = document.getElementById('light');
 setInterval(() => {
     document.getElementById('number').innerHTML = number;
     document.getElementById('clicks').innerHTML = clicks;
+    if(clicks == 0) {
+        number = "undefined";
+    }
 }, 5)
 
 /// Increment
@@ -76,4 +81,34 @@ function lightswitch() {
         document.querySelector('div').style.color = "black";
         document.querySelector('a').style.color = "#6000ba";
     }
+}
+
+/// Automode
+
+function autoclick() {
+    if(autoStatus.innerHTML == "Off") {
+        // Update label
+        document.getElementById('autoCheck').innerHTML = "On";
+        
+        // Autoclicks
+        autoInt = setInterval(auto, autoInterval);
+        autoInt;
+    } else if (autoStatus.innerHTML == "On") {
+        // Update label
+        document.getElementById('autoCheck').innerHTML = "Off";
+        
+        // Stop autoclicking
+        clearInterval(autoInt);
+    }
+}
+
+function auto() {
+    clicks++;
+    number = Math.log10(clicks);
+}
+
+/// Reset
+function reset() {
+    clicks = 0;
+    number = Math.log10(clicks);
 }

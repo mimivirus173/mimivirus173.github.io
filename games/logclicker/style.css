@@ -57,8 +57,9 @@ button:disabled {
     background-color: rgb(255, 190, 167);;
 }
 
-#lightswitch {
+#settings {
     position: absolute;
+    size: 75%;
     top: 6px;
     left: 6px;
     font-size: 75%;
