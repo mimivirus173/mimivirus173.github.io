@@ -20,9 +20,11 @@
             <h1 title="(log10)">LogClicker</h1>
             
             <div id="settings">
-                <button id="lightswitch" onclick="lightswitch()" title="A lightswitch">Dark mode: <span id="light">Off</span></button>
-                <button id="auto" onclick="autoclick()" title="Increases the count by 1 every 5 ms">Automode: <span id="autoCheck">Off</span></button>
-                <button id="reset" onclick="reset()" title="Sets the count to 0">Reset count</button>
+                <button id="lightswitch" class="settingButton" onclick="lightswitch()" title="A lightswitch">Dark mode: <span id="light">Off</span></button>
+                <p></p>
+                <button id="auto" class="settingButton" onclick="autoclick()" title="Increases the count by 1 every 5 ms">Automode: <span id="autoCheck">Off</span></button>
+                <p></p>
+                <button id="reset" class="settingButton" onclick="reset()" title="Sets the count to 0">Reset count</button>
             </div>
             <div id="main">
                 <button id="increment" onclick="log()" title="Increment count by 1">Increase</button>

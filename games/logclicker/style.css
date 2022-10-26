@@ -59,9 +59,14 @@ button:disabled {
 
 #settings {
     position: absolute;
+    width: 60px;
     top: 6px;
     left: 6px;
-    font-size: 75%;
+}
+
+.settingButton {
+    padding: 10px 21.333px;
+    font-size: 12px;
 }
 
 #logText {

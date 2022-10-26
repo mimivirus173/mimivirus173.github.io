@@ -18,8 +18,10 @@ var autoStatus = document.getElementById('autoCheck');
 setInterval(() => {
     document.getElementById('number').innerHTML = number;
     document.getElementById('clicks').innerHTML = clicks;
+    
+    // log10(0) is invalid
     if(clicks == 0) {
-        number = "undefined";
+        number = "N/A";
     }
 }, 5)
 
@@ -87,16 +89,22 @@ function lightswitch() {
 
 function autoclick() {
     if(autoStatus.innerHTML == "Off") {
-        // Update label
+        // Update label and play sound
         document.getElementById('autoCheck').innerHTML = "On";
         
+        var lightOff = new Audio('media/lightOn.mp3');
+        lightOff.play();
+
         // Autoclicks
         autoInt = setInterval(auto, autoInterval);
         autoInt;
     } else if (autoStatus.innerHTML == "On") {
-        // Update label
+        // Update label and play sound
         document.getElementById('autoCheck').innerHTML = "Off";
         
+        var lightOn = new Audio('media/lightOff.mp3');
+        lightOn.play();
+
         // Stop autoclicking
         clearInterval(autoInt);
     }
@@ -111,4 +119,8 @@ function auto() {
 function reset() {
     clicks = 0;
     number = Math.log10(clicks);
+    
+    // Play sound
+    var tick = new Audio('media/tick.mp3');
+    tick.play();
 }
