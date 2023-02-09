@@ -1,0 +1,74 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: black;
+}
+
+#container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footer {
+    clear: both;
+    bottom: 0px;
+    padding: 10px;
+    text-align: right;
+    position: absolute;
+}
+
+button {
+    background-color: #06c009;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #00a103;
+    color: white;
+}
+
+button:active {
+    background-color: #00da04;
+}
+
+button {
+    animation-duration: 0.6s;
+    animation-name: grow;
+}
+
+@keyframes grow {
+    from {
+        padding: 1px 1px;
+    }
+
+    to {
+        padding: 15px 32px;
+    }
+}
+
+button:disabled {
+    background-color: rgb(255, 190, 167);;
+}
+
+#settings {
+    position: absolute;
+    width: 60px;
+    top: 6px;
+    left: 6px;
+}
+
+.settingButton {
+    padding: 10px 21.333px;
+    font-size: 12px;
+}
+
+#logText {
+    font-family: monospace, monospace;
+}

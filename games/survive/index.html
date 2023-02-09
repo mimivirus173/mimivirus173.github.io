@@ -3,12 +3,12 @@
 <html>
 
 <head>
-    <title>LogClicker</title>
+    <title>Surival game thing</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" href="../../media/Tethys.gif" type="image/x-icon">
     <!--METADATA-->
     <meta charset="UTF-8">
-    <meta name="description" content="Log10 clicker game">
+    <meta name="description" content="Survival game thing">
     <meta name="keywords" content="HTML, CSS, JavaScript, mimivirus173, clicker">
     <meta name="author" content="mimivirus173">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,22 +17,16 @@
 <body>
     <div id="container">
         <div id="main">
-            <h1 title="(log10)">LogClicker</h1>
+            <h1>Surival game thing</h1>
             
             <div id="settings">
                 <button id="lightswitch" class="settingButton" onclick="lightswitch()" title="A lightswitch">Dark mode: <span id="light">Off</span></button>
-                <p></p>
-                <button id="auto" class="settingButton" onclick="autoclick()" title="Increases the count by 1 every 5 ms">Automode: <span id="autoCheck">Off</span></button>
-                <p></p>
-                <button id="reset" class="settingButton" onclick="reset()" title="Sets the count to 0">Reset count</button>
             </div>
             <div id="main">
                 <button id="increment" onclick="log()" title="Increment count by 1">Increase</button>
             
-                <p id="logText">Log: <span id="number">0</span></p>
-                <p>Count: <span id="clicks">0</span></p>
-
-                <button id="decrement" onclick="dec()" title="Decrement count by 1">Decrease</button>
+                <p id="foodText">Food left: <span id="number">0</span></p>
+                <p>Hunger level: <span id="hunger">0</span></p>
             </div>
         </div>
         
