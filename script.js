@@ -1,11 +1,11 @@
-function playMusic(){
+function playMusic() {
     var music = new Audio('media/vineboom.mp3');
     music.play();
 }
 
-function speedTethys(){
+function speedTethys() {
     var image = document.getElementById('Tethys');
-    
+
     if (image.src.match("media/Tethys.gif")) {
         image.src = "media/FastTethys.gif"
         document.getElementById('tethysButton').innerHTML = "Slow down"
@@ -15,9 +15,9 @@ function speedTethys(){
     }
 }
 
-function timer(){
+function timer() {
     var sec = 3;
-    var secCount = setInterval(function(){
+    var secCount = setInterval(function () {
         sec--;
         if (sec < 0) {
             document.getElementById('timer').innerHTML = "0";
