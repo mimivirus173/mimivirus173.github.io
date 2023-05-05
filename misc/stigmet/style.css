@@ -60,9 +60,10 @@ button:disabled {
 
 #settings {
     position: absolute;
-    width: 60px;
+    text-align: left;
+    /* width: 60px; */
     top: 6px;
-    left: 6px;
+    left: 12px;
 }
 
 .settingButton {

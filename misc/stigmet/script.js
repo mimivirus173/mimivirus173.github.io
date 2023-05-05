@@ -18,26 +18,29 @@ function calc() {
 
     // Rokna karakter
     switch (true) {
+        case initMet < 0:
+            finalMet = "?";
+            break;
         case initMet <= 6:
-            finalMet = -3;
+            finalMet = "-3";
             break;
         case initMet <= 33:
-            finalMet = 00;
+            finalMet = "00";
             break;
         case initMet <= 39:
-            finalMet = 02;
+            finalMet = "02";
             break;
         case initMet <= 55:
-            finalMet = 4;
+            finalMet = "4";
             break;
         case initMet <= 75:
-            finalMet = 7;
+            finalMet = "7";
             break;
         case initMet <= 92:
-            finalMet = 10;
+            finalMet = "10";
             break;
         case initMet <= 100:
-            finalMet = 12;
+            finalMet = "12";
             break;
         default:
             finalMet = "?";
