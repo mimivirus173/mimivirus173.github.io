@@ -11,6 +11,7 @@ body {
 #footer {
     clear: both;
     bottom: 0px;
+    right: 0px;
     padding: 10px;
     text-align: right;
     position: absolute;
