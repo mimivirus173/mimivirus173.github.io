@@ -12,6 +12,7 @@ function calc() {
     tíniStig = parseInt(document.getElementById('stig').value);
 
     // Rokna prosent
+    // parseInt converts the string into integer
     initMet = parseInt((tíniStig / maxStig) * 100);
 
     // Rokna karakter
