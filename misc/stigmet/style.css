@@ -17,6 +17,20 @@ body {
     position: absolute;
 }
 
+#settings {
+    position: absolute;
+    text-align: left;
+    /* width: 60px; */
+    top: 6px;
+    left: 12px;
+}
+
+/*
+.settingButton {
+    padding: 10px 21.333px;
+    font-size: 12px;
+}
+
 button {
     background-color: #50bfff;
     border: none;
@@ -57,20 +71,4 @@ button {
 button:disabled {
     background-color: #92b6ca;
 }
-
-#settings {
-    position: absolute;
-    text-align: left;
-    /* width: 60px; */
-    top: 6px;
-    left: 12px;
-}
-
-.settingButton {
-    padding: 10px 21.333px;
-    font-size: 12px;
-}
-
-#logText {
-    font-family: monospace, monospace;
-}
+*/
