@@ -1,6 +1,4 @@
 // Variablar
-var test = 1;
-
 var maxStig;
 var tíniStig;
 
