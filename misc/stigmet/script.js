@@ -33,7 +33,7 @@ function calc() {
         case initMet <= 55:
             finalMet = "4";
             break;
-        case initMet <= 75:
+        case initMet <= 72:
             finalMet = "7";
             break;
         case initMet <= 92:
