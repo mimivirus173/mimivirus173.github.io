@@ -25,6 +25,13 @@ body {
     left: 12px;
 }
 
+@media screen and (max-width: 480px) {
+    #settings {
+        bottom: 6px;
+        top: auto;
+    }
+}
+
 /*
 .settingButton {
     padding: 10px 21.333px;
