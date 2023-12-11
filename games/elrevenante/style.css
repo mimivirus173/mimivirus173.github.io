@@ -1,8 +1,13 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
 #game {
     position: fixed; /* absolute */
     top: 0;
     left: 0;
     width: 100vw;    /* 100% */
     height: 100vh;   /* 100% */
-    /* background-color: red; */
+    background-color: red;
 }
