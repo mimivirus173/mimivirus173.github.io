@@ -1,5 +1,5 @@
 const canvas = document.getElementById("game");     // Find the game canvas
-const ctx = canvas.getContext("2d");                // Dfine canvas as 2d
+const ctx = canvas.getContext("2d");                // Define canvas as 2d
 
 // Movement variables
 let x = 0;
