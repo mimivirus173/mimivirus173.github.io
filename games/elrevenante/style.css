@@ -3,6 +3,10 @@ body {
     overflow: hidden;
 }
 
+canvas {
+    display: block;
+}
+
 /* #game {
     position: fixed;
     top: 0;
