@@ -16,8 +16,9 @@ function update() {
     
     doomguy.update();
 
-    // Draw actors
-    // Flip the image if Doomguy is past the middle of the canvas and space is pressed
+    /// Draw actors
+
+    // Flip doomguy if he is past the middle of the canvas and is shooting
     if (doomguy.x > canvas.width / 2 && doomguy.keySpace) {
         ctx.save(); // Save the current context
         ctx.scale(-1, 1); // Flip context horizontally
@@ -26,6 +27,7 @@ function update() {
     } else {
         ctx.drawImage(player, doomguy.x, doomguy.y, 41, 56);
     }
+    
     ctx.drawImage(revenant, window.innerWidth / 2, window.innerHeight / 2, 52, 101);
 
     requestAnimationFrame(update);
