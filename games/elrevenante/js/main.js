@@ -1,6 +1,12 @@
 const canvas = document.getElementById("game");     // Find the game canvas
 const ctx = canvas.getContext("2d");                // Define canvas as 2d
 
+// Tweak canvas size
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var player = new Image();
+
 // Movement variables
 let x = 0;
 let y = 0;
@@ -25,13 +31,14 @@ function movementPhys(speed, friction) {
 
 // Update the canvas
 function update() {
+    player.src = 'Doomguy/media/doomguy.png'
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     movementPhys(2, 0.9);
 
     x += xvel;
     y += yvel;
 
-    ctx.fillRect(x, y, 10, 10);
+    ctx.drawImage(player, x, y, 41, 56);
     requestAnimationFrame(update);
 
     // console.log(keyUp, keyDown, keyLeft, keyRight);
