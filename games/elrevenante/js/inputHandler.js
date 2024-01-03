@@ -1,15 +1,15 @@
-addEventListener("keydown", function(e) {
-    if(e.code == 'KeyW') vyu = -5;
-    if(e.code == 'KeyS') vyd = 5;
+addEventListener("keydown", function(event) {
+    if(event.code == 'KeyW') keyUp = 1;
+    if(event.code == 'KeyS') keyDown = 1;
     
-    if(e.code == 'KeyA') vxl = -5;
-    if(e.code == 'KeyD') vxr = 5;
+    if(event.code == 'KeyA') keyLeft = 1;
+    if(event.code == 'KeyD') keyRight = 1;
 })
 
-addEventListener("keyup", function(e) {
-    if(e.code == 'KeyW') vyu = 0;
-    if(e.code == 'KeyS') vyd = 0;
+addEventListener("keyup", function(event) {
+    if(event.code == 'KeyW') keyUp = 0;
+    if(event.code == 'KeyS') keyDown = 0;
     
-    if(e.code == 'KeyA') vxl = 0;
-    if(e.code == 'KeyD') vxr = 0;
+    if(event.code == 'KeyA') keyLeft = 0;
+    if(event.code == 'KeyD') keyRight = 0;
 })
