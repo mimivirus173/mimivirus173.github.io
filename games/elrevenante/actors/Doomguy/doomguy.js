@@ -71,7 +71,9 @@ let doomguy = {
     // Update function used in main.js
     update: function() {
         doomguy.movementPhys(2, 0.9);
-        doomguy.x += doomguy.xvel;
-        doomguy.y += doomguy.yvel;
+        
+        // Prevent passing outside the edge of the screen
+        doomguy.x = Math.min(canvas.width - 41, Math.max(0, doomguy.x + doomguy.xvel));
+        doomguy.y = Math.min(canvas.height - 56, Math.max(0, doomguy.y + doomguy.yvel));
     }
 };
