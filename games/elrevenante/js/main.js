@@ -6,6 +6,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var player = new Image();
+var revenant = new Image();
 
 // Movement variables
 let x = 0;
@@ -32,6 +33,8 @@ function movementPhys(speed, friction) {
 // Update the canvas
 function update() {
     player.src = 'Doomguy/media/doomguy.png'
+    revenant.src = 'Revenant/media/revenant1.png'
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     movementPhys(2, 0.9);
 
@@ -39,8 +42,9 @@ function update() {
     y += yvel;
 
     ctx.drawImage(player, x, y, 41, 56);
-    requestAnimationFrame(update);
+    ctx.drawImage(revenant, canvas.width / 2, canvas.height / 2, 52, 101);
 
+    requestAnimationFrame(update);
     // console.log(keyUp, keyDown, keyLeft, keyRight);
 };
 
