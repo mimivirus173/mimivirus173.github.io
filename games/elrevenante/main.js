@@ -1,3 +1,5 @@
+// main.js
+
 const canvas = document.getElementById("game");     // Find the game canvas
 const ctx = canvas.getContext("2d");                // Define canvas as 2d
 
