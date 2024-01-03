@@ -18,6 +18,7 @@ let doomguy = {
     keyDown: 0,
     keyLeft: 0,
     keyRight: 0,
+    keySpace: 0,
 
     // Handles key presses
     init: function() {
@@ -40,6 +41,7 @@ let doomguy = {
                 doomguy.keyRight = 1;
                 break;
             case 'Space':
+                doomguy.keySpace = 1;
                 player.src = 'actors/Doomguy/media/doomguyshoot.png';
                 break;
         }
@@ -60,6 +62,7 @@ let doomguy = {
                 doomguy.keyRight = 0;
                 break;
             case 'Space':
+                doomguy.keySpace = 0;
                 player.src = 'actors/Doomguy/media/doomguy.png';
                 break;
         }
