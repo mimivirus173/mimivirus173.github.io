@@ -39,6 +39,9 @@ let doomguy = {
             case 'KeyD':
                 doomguy.keyRight = 1;
                 break;
+            case 'Space':
+                player.src = 'actors/Doomguy/media/doomguyshoot.png';
+                break;
         }
     },
 
@@ -55,6 +58,9 @@ let doomguy = {
                 break;
             case 'KeyD':
                 doomguy.keyRight = 0;
+                break;
+            case 'Space':
+                player.src = 'actors/Doomguy/media/doomguy.png';
                 break;
         }
     },
