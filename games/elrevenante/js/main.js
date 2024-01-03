@@ -43,6 +43,7 @@ function update() {
     x += xvel;
     y += yvel;
 
+    // Draw actors
     ctx.drawImage(player, x, y, 41, 56);
     ctx.drawImage(revenant, window.innerWidth / 2, window.innerHeight / 2, 52, 101);
 
