@@ -1,18 +1,25 @@
 // doomguy.js
 
+// Player image
 var player = new Image();
 player.src = 'actors/Doomguy/media/doomguy.png';
 
+// Doomguy class
 let doomguy = {
+    
+    // Movement variables
     x: 0,
     y: 0,
     xvel: 0,
     yvel: 0,
+
+    // Key registering
     keyUp: 0,
     keyDown: 0,
     keyLeft: 0,
     keyRight: 0,
 
+    // Handles key presses
     init: function() {
         addEventListener("keydown", this.keyDownHandler);
         addEventListener("keyup", this.keyUpHandler);
@@ -52,6 +59,7 @@ let doomguy = {
         }
     },
 
+    // Smooth movement
     movementPhys: function(speed, friction) {
         doomguy.xvel += (doomguy.keyRight + (0 - doomguy.keyLeft)) * speed;
         doomguy.xvel = doomguy.xvel * friction;
@@ -60,6 +68,7 @@ let doomguy = {
         doomguy.yvel = doomguy.yvel * friction;
     },
 
+    // Update function used in main.js
     update: function() {
         doomguy.movementPhys(2, 0.9);
         doomguy.x += doomguy.xvel;
