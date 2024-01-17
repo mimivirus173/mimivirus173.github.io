@@ -1,3 +1,5 @@
 
 *.ini
-llhtnq/
+node_modules/
+bin/
+package-lock.json
