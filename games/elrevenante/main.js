@@ -9,6 +9,7 @@ canvas.height = window.innerHeight;
 let bgImg = new Image();
 bgImg.src = 'media/156.png';
 
+// Once background has loaded
 bgImg.onload = function() {
     // Initialize actors
     doomguy.init();
