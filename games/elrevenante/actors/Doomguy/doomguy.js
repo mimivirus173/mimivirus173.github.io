@@ -27,54 +27,27 @@ let doomguy = {
     },
 
     keyDownHandler: function(event) {
-        switch (event.code) {
-            case 'ArrowUp':
-            case 'KeyW':
-                doomguy.keyUp = 1;
-                break;
-            case 'ArrowDown':
-            case 'KeyS':
-                doomguy.keyDown = 1;
-                break;
-            case 'ArrowLeft':
-            case 'KeyA':
-                doomguy.keyLeft = 1;
-                break;
-            case 'ArrowRight':
-            case 'KeyD':
-                doomguy.keyRight = 1;
-                break;
-            case 'Space':
-                doomguy.keySpace = 1;
-                setInterval(doomguy.shoot(), 1000);
-                break;
-        }
+        if (event.code == 'KeyW' || event.code == 'ArrowUp') doomguy.keyUp = 1;
+        if (event.code == 'KeyS' || event.code == 'ArrowDown') doomguy.keyDown = 1;
+        if (event.code == 'KeyA' || event.code == 'ArrowLeft') doomguy.keyLeft = 1;
+        if (event.code == 'KeyD' || event.code == 'ArrowRight') doomguy.keyRight = 1;
+        if (event.code == 'Space') {
+            doomguy.keySpace = 1;
+            setInterval(doomguy.shoot(), 1000);
+        };
     },
-
+    
     keyUpHandler: function(event) {
-        switch (event.code) {
-            case 'ArrowUp':
-            case 'KeyW':
-                doomguy.keyUp = 0;
-                break;
-            case 'ArrowDown':
-            case 'KeyS':
-                doomguy.keyDown = 0;
-                break;
-            case 'ArrowLeft':
-            case 'KeyA':
-                doomguy.keyLeft = 0;
-                break;
-            case 'ArrowRight':
-            case 'KeyD':
-                doomguy.keyRight = 0;
-                break;
-            case 'Space':
-                doomguy.keySpace = 0;
-                player.src = 'actors/Doomguy/media/doomguy.png';
-                break;
-        }
+        if (event.code == 'KeyW' || event.code == 'ArrowUp') doomguy.keyUp = 0;
+        if (event.code == 'KeyS' || event.code == 'ArrowDown') doomguy.keyDown = 0;
+        if (event.code == 'KeyA' || event.code == 'ArrowLeft') doomguy.keyLeft = 0;
+        if (event.code == 'KeyD' || event.code == 'ArrowRight') doomguy.keyRight = 0;
+        if (event.code == 'Space') {
+            doomguy.keySpace = 0;
+            player.src = 'actors/Doomguy/media/doomguy.png';
+        };
     },
+    
 
     // Smooth movement
     // From my project https://scratch.mit.edu/projects/490485481/
