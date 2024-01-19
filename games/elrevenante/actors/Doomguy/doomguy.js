@@ -28,15 +28,19 @@ let doomguy = {
 
     keyDownHandler: function(event) {
         switch (event.code) {
+            case 'ArrowUp':
             case 'KeyW':
                 doomguy.keyUp = 1;
                 break;
+            case 'ArrowDown':
             case 'KeyS':
                 doomguy.keyDown = 1;
                 break;
+            case 'ArrowLeft':
             case 'KeyA':
                 doomguy.keyLeft = 1;
                 break;
+            case 'ArrowRight':
             case 'KeyD':
                 doomguy.keyRight = 1;
                 break;
@@ -49,15 +53,19 @@ let doomguy = {
 
     keyUpHandler: function(event) {
         switch (event.code) {
+            case 'ArrowUp':
             case 'KeyW':
                 doomguy.keyUp = 0;
                 break;
+            case 'ArrowDown':
             case 'KeyS':
                 doomguy.keyDown = 0;
                 break;
+            case 'ArrowLeft':
             case 'KeyA':
                 doomguy.keyLeft = 0;
                 break;
+            case 'ArrowRight':
             case 'KeyD':
                 doomguy.keyRight = 0;
                 break;
