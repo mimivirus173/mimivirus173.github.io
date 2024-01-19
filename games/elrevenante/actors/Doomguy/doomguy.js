@@ -77,6 +77,7 @@ let doomguy = {
     },
 
     // Smooth movement
+    // From my project https://scratch.mit.edu/projects/490485481/
     movementPhys: function(speed, friction) {
         doomguy.xvel += (doomguy.keyRight + (0 - doomguy.keyLeft)) * speed;
         doomguy.xvel = doomguy.xvel * friction;
