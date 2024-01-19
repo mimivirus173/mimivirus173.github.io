@@ -18,6 +18,8 @@ bgImg.onload = function() {
     function update() {
         // Clear canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         
         // Draw background
         let pattern = ctx.createPattern(bgImg, 'repeat');   // Create pattern

@@ -46,7 +46,7 @@ let doomguy = {
                 break;
             case 'Space':
                 doomguy.keySpace = 1;
-                player.src = 'actors/Doomguy/media/doomguyshoot.png';
+                setInterval(doomguy.shoot(), 1000);
                 break;
         }
     },
@@ -84,6 +84,16 @@ let doomguy = {
 
         doomguy.yvel += (doomguy.keyDown + (0 - doomguy.keyUp)) * speed;
         doomguy.yvel = doomguy.yvel * friction;
+    },
+
+    // Attack function
+    shoot: function() {
+        // Update sprite
+        player.src = 'actors/Doomguy/media/doomguyshoot.png';
+        
+        // Pistol audio
+        this.pistolAudio = new Audio('actors/Doomguy/media/dspistol.wav');
+        this.pistolAudio.play();
     },
 
     // Update function used in main.js
