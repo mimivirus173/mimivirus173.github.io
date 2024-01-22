@@ -65,7 +65,7 @@ let doomguy = {
         // Check if 367ms has passed since the last shot
         let currentTime = Date.now();
         if (currentTime - doomguy.lastShootTime >= 367) {
-                        // Pistol audio
+            // Pistol audio
             doomguy.pistolAudio = new Audio('actors/Doomguy/media/dspistol.wav');
             doomguy.pistolAudio.play();
 
