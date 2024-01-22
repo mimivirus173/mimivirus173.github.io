@@ -25,25 +25,15 @@ bgImg.onload = function() {
         let pattern = ctx.createPattern(bgImg, 'repeat');   // Create pattern
         ctx.fillStyle = pattern;                            // Set fill style to pattern
         ctx.fillRect(0, 0, canvas.width, canvas.height);    // Fill canvas
-    
+        
+        // Update actors
         doomguy.update();
 
-        /// Draw actors
-
-        // Flip doomguy if he is past the middle of the canvas and is shooting
-        if (doomguy.x > canvas.width / 2 && doomguy.keySpace) {
-            ctx.save(); // Save the current context
-            ctx.scale(-1, 1); // Flip context horizontally
-            ctx.drawImage(player, -doomguy.x - player.width, doomguy.y, 41, 56); // Draw the image
-            ctx.restore(); // Restore the context to its original state
-        } else {
-            ctx.drawImage(player, doomguy.x, doomguy.y, 41, 56);
-        }
-        
-        // Draw revenant
+        // Draw actors
+        ctx.drawImage(player, doomguy.x, doomguy.y, 41, 56);
         ctx.drawImage(revenant, window.innerWidth / 2, window.innerHeight / 2, 52, 101);
 
-        // Update canvas
+        // Refresh canvas
         requestAnimationFrame(update);
     };
 

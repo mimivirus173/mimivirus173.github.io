@@ -65,10 +65,7 @@ let doomguy = {
         // Check if 367ms has passed since the last shot
         let currentTime = Date.now();
         if (currentTime - doomguy.lastShootTime >= 367) {
-            // Update sprite
-            player.src = 'actors/Doomguy/media/doomguyshoot.png';
-            
-            // Pistol audio
+                        // Pistol audio
             doomguy.pistolAudio = new Audio('actors/Doomguy/media/dspistol.wav');
             doomguy.pistolAudio.play();
 
@@ -79,7 +76,15 @@ let doomguy = {
 
     // Update function used in main.js
     update: function() {
+        // Physics
         doomguy.movementPhys(2, 0.9);
+
+        // Flip doomguy when passing the revenant
+        if(doomguy.x > canvas.width / 2 && doomguy.keySpace) {
+            player.src = 'actors/Doomguy/media/doomguyshoot2.png';
+        } else if(doomguy.x < canvas.width / 2 && doomguy.keySpace) {
+            player.src = 'actors/Doomguy/media/doomguyshoot.png';
+        }
         
         // Prevent passing outside the edge of the screen
         doomguy.x = Math.min(canvas.width - 41, Math.max(0, doomguy.x + doomguy.xvel));
