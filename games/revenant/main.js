@@ -39,9 +39,11 @@ bgImg.onload = function() {
         } else {
             ctx.drawImage(player, doomguy.x, doomguy.y, 41, 56);
         }
-    
+        
+        // Draw revenant
         ctx.drawImage(revenant, window.innerWidth / 2, window.innerHeight / 2, 52, 101);
 
+        // Update canvas
         requestAnimationFrame(update);
     };
 
