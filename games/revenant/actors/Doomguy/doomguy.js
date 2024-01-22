@@ -62,9 +62,9 @@ let doomguy = {
 
     // Attack function
     shoot: function() {
-        // Check if one second has passed since the last shot
+        // Check if 367ms has passed since the last shot
         let currentTime = Date.now();
-        if (currentTime - doomguy.lastShootTime >= 1000) {
+        if (currentTime - doomguy.lastShootTime >= 367) {
             // Update sprite
             player.src = 'actors/Doomguy/media/doomguyshoot.png';
             
