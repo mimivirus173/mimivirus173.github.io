@@ -20,6 +20,9 @@ let doomguy = {
     keyRight: 0,
     keySpace: 0,
 
+    // Variable to track the last time the shoot function was called
+    lastShootTime: 0,
+
     // Handles key presses
     init: function() {
         addEventListener("keydown", this.keyDownHandler);
@@ -48,9 +51,7 @@ let doomguy = {
         };
     },
     
-
     // Smooth movement
-    // From my project https://scratch.mit.edu/projects/490485481/
     movementPhys: function(speed, friction) {
         doomguy.xvel += (doomguy.keyRight + (0 - doomguy.keyLeft)) * speed;
         doomguy.xvel = doomguy.xvel * friction;
@@ -61,12 +62,19 @@ let doomguy = {
 
     // Attack function
     shoot: function() {
-        // Update sprite
-        player.src = 'actors/Doomguy/media/doomguyshoot.png';
-        
-        // Pistol audio
-        this.pistolAudio = new Audio('actors/Doomguy/media/dspistol.wav');
-        this.pistolAudio.play();
+        // Check if one second has passed since the last shot
+        let currentTime = Date.now();
+        if (currentTime - doomguy.lastShootTime >= 1000) {
+            // Update sprite
+            player.src = 'actors/Doomguy/media/doomguyshoot.png';
+            
+            // Pistol audio
+            doomguy.pistolAudio = new Audio('actors/Doomguy/media/dspistol.wav');
+            doomguy.pistolAudio.play();
+
+            // Update the last shoot time
+            doomguy.lastShootTime = currentTime;
+        }
     },
 
     // Update function used in main.js
