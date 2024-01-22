@@ -36,7 +36,7 @@ let doomguy = {
         if (event.code == 'KeyD' || event.code == 'ArrowRight') doomguy.keyRight = 1;
         if (event.code == 'Space') {
             doomguy.keySpace = 1;
-            setInterval(doomguy.shoot(), 1000);
+            doomguy.shoot();
         };
     },
     
