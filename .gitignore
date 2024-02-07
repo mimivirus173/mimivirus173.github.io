@@ -1,6 +1,8 @@
-
 *.ini
-node_modules/
 bin/
-package-lock.json
-games/tictactoe/nodeJS.zip
+
+# node
+node_modules/
+.cache/
+public
+nodeJS.zip
