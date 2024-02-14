@@ -5,4 +5,4 @@ bin/
 node_modules/
 .cache/
 public
-nodeJS.zip
+node_modules.zip
