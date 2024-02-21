@@ -10,8 +10,9 @@ const IndexPage = () => {
       <Layout pageTitle="Home Page"> 
         <p>I'm making this</p>
         <StaticImage
-        alt="tethys"
-        src="https://mimivirus173.github.io/media/Tethys.gif"/>
+        alt="dog"
+        src="../images/dog.jpg"
+        />
       </Layout>
     </main>
   )
