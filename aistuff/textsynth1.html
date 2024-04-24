@@ -165,14 +165,223 @@ std::size_t <a class="link" href="async_read_some.html" title="basic_seq_packet_
                 the stream socket.
               </p>
               <p>
-                This function is used to as
+                This function is used to asynchronously read data from the stream
+                socket. The function call always returns immediately.
+                The asynchronous operation will continue until one of the following
+                conditions is true:
               </p>
+              <ol type="1">
+                <li>
+                  The supplied buffers are full. That is, the bytes transferred is equal
+                  to the sum of the buffer sizes.
+                </li>
+
+              </ol>
             </td>
           </tr>
+          <tr>
+            <td>
+              <p>
+                <a class="link" href="async_read_some/overload3.html"
+                  title="basic_seq_packet_socket::async_read_some (3 of 3 overloads)">async_read_some</a>
+              </p>
+            </td>
+            <td>
+              <p>
+                Start an asynchronous operation to read a certain amount of data from
+                the stream socket.
+              </p>
+              <p>
+                This function is used to asynchronously read data from the stream
+                socket. The function call always returns immediately.
+                The asynchronous operation will continue until one of the following
+                conditions is true:
+              </p>
+              <ol type="1">
+                <li>
+                  The supplied buffers are full. That is, the bytes transferred is equal
+                  to the sum of the buffer sizes.
+                </li>
+              </ol>
+            </td>
         </tbody>
       </table>
+      <h6>
+        <a name="asio.reference.basic_seq_packet_socket.async_write_some.h0"></a>
+        <span><a name="asio.reference.basic_seq_packet_socket.async_write_some.member_functions"></a></span><a
+          class="link"
+          href="async_write_some.html#asio.reference.basic_seq_packet_socket.async_write_some.member_functions">Member
+          Functions</a>
+      </h6>
+      <div class="informaltable">
+        <table class="table">
+          <colgroup>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>
+                <p>
+                  Name
+                </p>
+              </th>
+              <th>
+                <p>
+                  Description
+                </p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>
+                  <a class="link" href="async_write_some/overload1.html"
+                    title="basic_seq_packet_socket::async_write_some (1 of 2 overloads)">async_write_some</a>
+                </p>
+              </td>
+              <td>
+                <p>
+                  Start an asynchronous operation to write some data to the peer.
+                </p>
+                <p>
+                  This function is used to asynchronously write some data to the peer. The function call always returns
+                  immediately.
+
+                  The asynchronous operation will continue until one of the following
+                  conditions is true:
+                </p>
+                <ol type="1">
+                  <li>
+                    An error occurred.
+                  </li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>
+                  <a class="link" href="async_write_some/overload2.html"
+                    title="basic_seq_packet_socket::async_write_some (2 of 2 overloads)">async_write_some</a>
+                </p>
+              </td>
+              <td>
+                <p>
+                  Start an asynchronous operation to write some data to the peer.
+                <p>
+                  This function is used to asynchronously write some data to the peer. The function call always returns
+                  immediately.
+
+                  The asynchronous operation will continue until one of the following
+                  conditions is true:
+                </p>
+                <ol type="1">
+                  <li>
+                    An error occurred.
+                  </li>
+                </ol>
+          </tbody>
+        </table>
+        <h6>
+          <a name="asio.reference.basic_seq_packet_socket.asio_service.h0"></a>
+          <p>
+            The <code class="computeroutput">asio::asio_service</code> class is used
+
+            to initialize and terminate an application.
+          </p>
+          <p>
+            It manages the event loop, and is used to register services with the
+
+            application. The class manages a single event loop, which
+
+            handles all the event-driven tasks within the application. A
+
+            <a class="link" href="basic_io_service.html">basic_io_service</a> is derived from this class.
+          </p>
+          <p>
+            The <code class="computeroutput">asio::asio_service</code> class:
+          <ul>
+            <li class="listitem">
+              <p class="description">
+                Derives from the <code class="computeroutput">io_service</code> class.
+            </li>
+            <li class="listitem">
+              <p class="description">
+                Handles the event loop.
+            </li>
+            <li class="listitem">
+              <p class="description">
+                Contains the service points.
+            </li>
+            <li class="listitem">
+              <p class="description">
+                Handles the lifetime.
+            </li>
+          </ul>
+          <span><a name="asio.reference.basic_seq_packet_socket.asio_service.member_functions"></a><a class="link"
+              href="asio_service.html#asio.reference.basic_seq_packet_socket.asio_service.member_functions">Member
+              Functions</a></span>
+          <h6>
+            <a name="asio.reference.basic_seq_packet_socket.asio_service.create.h0"></a>
+            <span><a name="asio.reference.basic_seq_packet_socket.asio_service.create.member_functions"></a></span><a
+              class="link"
+              href="asio_service/create.html#asio.reference.basic_seq_packet_socket.asio_service.create.member_functions">Member
+              Functions</a>
+          </h6>
+          <div class="informaltable">
+            <table class="table">
+              <colgroup>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <p>
+                      Name
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      Description
+                    </p>
+                  </th>  
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>
+                      <span><a class="function"><code>asio::io_service&lt; &gt;
+              &lt;
+              asio::error_code &gt;</code>
+                      </span>
+                      <a class="link"
+                        href="asio_service/create.html#asio.reference.basic_seq_packet_socket.asio_service.create.member_functions.asio::io_service&lt;&gt;.create"
+                        title="basic_seq_packet_socket::asio_service::create ()"><span class="emphasis"><span
+                            class="oi">asio::io_service&lt;&gt;.create</span></span></a>(
+                      asio::io_service&lt;&gt;&lt;
+                      asio::error_code &gt;
+                    <p>
+                      Construct an empty service and add the
+                      <a class="link" href="basic_seq_packet_socket.html">basic_seq_packet_socket</a>
+                    </p>
+                    <p>
+                      <span><a class="link" href="../asio/error.html">asio::error</a>&lt;&gt;&lt;
+                        <span class="emphasis"><span class="oi">asio::error_code</span></span>
+                        </a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </p>
+      </h6>
     </div>
   </div>
+</div>
+
 </body>
 
 </html>
