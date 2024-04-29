@@ -13,6 +13,7 @@ bgImg.src = 'media/156.png';
 bgImg.onload = function() {
     // Initialize actors
     doomguy.init();
+    revenant.init();
 
     // Update canvas
     function update() {
@@ -31,7 +32,7 @@ bgImg.onload = function() {
 
         // Draw actors
         ctx.drawImage(player, doomguy.x, doomguy.y, 41, 56);
-        ctx.drawImage(revenant, window.innerWidth / 2, window.innerHeight / 2, 52, 101);
+        ctx.drawImage(demon, window.innerWidth / 2, window.innerHeight / 2, 52, 101);
 
         // Refresh canvas
         requestAnimationFrame(update);

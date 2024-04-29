@@ -81,9 +81,9 @@ let doomguy = {
 
         // Flip doomguy when passing the revenant
         if(doomguy.x > canvas.width / 2 && doomguy.keySpace) {
-            player.src = 'actors/Doomguy/media/doomguyshoot2.png';
+            player.src = 'actors/Doomguy/media/doomguyShoot2.png';
         } else if(doomguy.x < canvas.width / 2 && doomguy.keySpace) {
-            player.src = 'actors/Doomguy/media/doomguyshoot.png';
+            player.src = 'actors/Doomguy/media/doomguyShoot.png';
         }
         
         // Prevent passing outside the edge of the screen
