@@ -75,7 +75,7 @@ function calc() {
             default:
                 finalMet = "?";
         }
-    }else if (document.getElementById('stø').checked) {
+    } else if (document.getElementById('stø').checked) {
         switch (true) {
             case initMet < 0:
                 finalMet = "?";
