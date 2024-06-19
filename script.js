@@ -1,3 +1,7 @@
+const d = new Date();
+let year = d.getFullYear();
+document.getElementById("year").innerHTML = year;
+
 function playMusic() {
     var music = new Audio('media/vineboom.mp3');
     music.play();
