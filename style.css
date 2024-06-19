@@ -70,9 +70,11 @@ h3 {
 }
 
 #footer {
+    position: absolute;
     clear: both;
     padding: 10px 10px;
     text-align: right;
+    bottom: 0px;
 }
 
 
