@@ -75,8 +75,36 @@ function calc() {
             default:
                 finalMet = "?";
         }
-    }
-
+    }else if (document.getElementById('stø').checked) {
+        switch (true) {
+            case initMet < 0:
+                finalMet = "?";
+                break;
+            case initMet <= 8:
+                finalMet = "-3";
+                break;
+            case initMet <= 33:
+                finalMet = "00";
+                break;
+            case initMet <= 40:
+                finalMet = "02";
+                break;
+            case initMet <= 56:
+                finalMet = "4";
+                break;
+            case initMet <= 77:
+                finalMet = "7";
+                break;
+            case initMet <= 91:
+                finalMet = "10";
+                break;
+            case initMet <= 100:
+                finalMet = "12";
+                break;
+            default:
+                finalMet = "?";
+        }
+    } 
     // Prenta á síðuna
     document.getElementById('met').innerHTML = finalMet;
 }
