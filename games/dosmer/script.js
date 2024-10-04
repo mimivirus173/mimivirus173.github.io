@@ -2,8 +2,11 @@ let navn = '';
 
 // Rokna títt virði
 function calc() {
+    // Uppdatera navnið
+    document.getElementById('navnOutput').innerHTML = (navn == '') ? "Tú" : navn;
+    
     let dosmaraStig = 0;
-    let peruStig = 0; // Eg minnist ikki um orðið pera er brúkt av pápanum í TVE, men tað er tað umventa av ein dosmara
+    let peruStig = 0;
     
     // Get all questions
     const questions = document.querySelectorAll('.question');
@@ -18,37 +21,23 @@ function calc() {
             }
         }
     });
-    document.getElementById('foo').innerHTML = peruStig;
     
-    // Døm um dosmari ella ei (oh yeah nested if else functions)
+    // Døm um dosmari ella ei
     if(dosmaraStig > peruStig) {
-        if(navn == '') {
-            document.getElementById('met').innerHTML = "ERT";
-        } else {
-            document.getElementById('met').innerHTML = "ER";
-        }
+        document.getElementById('met').innerHTML = (navn == '') ? "ERT" : "ER";
     } else if(peruStig > dosmaraStig) {
-        if(navn == '') {
-            document.getElementById('met').innerHTML = "ERT IKKI";
-        } else {
-            document.getElementById('met').innerHTML = "ER IKKI";
-        }
+        document.getElementById('met').innerHTML = (navn == '') ? "ERT IKKI" : "ER IKKI";
     } else {
-        if(navn == '') {
-            document.getElementById('met').innerHTML = "ERT KANSKA";
-        } else {
-            document.getElementById('met').innerHTML = "ER KANSKA";
-        }
+        document.getElementById('met').innerHTML = (navn == '') ? "ERT KANSKA" : "ER KANSKA";
     }
 }
-
 
 // Navn títt
 function updateNavn() {
     navn = document.getElementById('navn').value;
-    if(navn == '') {
-        document.getElementById('navnOutput').innerHTML = "Tú";
-    } else {
-        document.getElementById('navnOutput').innerHTML = navn;
-    }
+}
+
+// Ert tú ein ísur?
+function ísur() {
+    document.getElementById('titleSubject').innerHTML = "ísur";
 }
