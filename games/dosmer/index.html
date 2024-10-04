@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ert tú ein dosmari?</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="../../media/tethys.ico" type="image/x-icon" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Ert tú ein dosmari?</h1>
+      <div id="main">
+        <input type="text" id="navn" name="navn" placeholder="Navn títt" oninput="updateNavn()">
+        <br>
+
+        <div id="quiz">
+            <fieldset id="q1" class="q">
+                <legend id="qTitle">Hvussu brúkar tú tína frítið?</legend>
+
+                <div>
+                    <input type="radio" id="q1-A" name="q1" value="arb">
+                    <label for="q1-A">Eg arbeiði hart</label>
+                </div>
+                <div>
+                    <input type="radio" id="q1-B" name="q1" value="slappi">
+                    <label for="q1-B">Eg slappi av</label>
+                </div>
+            </fieldset>
+
+            <button onclick="calc()">Lat inn svar</button>
+        </div>
+
+        <div id="endi">
+            <strong><span id="navnOutput">Tú</span> <span id="met">ERT</span> ein dosmari!</strong>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
