@@ -1,39 +1,113 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--eg dugi fanme at benda, allowa meg-->
     <title>Ert tú ein dosmari?</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="icon" href="../../media/tethys.ico" type="image/x-icon" />
-    <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
     <div id="container">
       <h1>Ert tú ein dosmari?</h1>
       <div id="main">
-        <input type="text" id="navn" name="navn" placeholder="Navn títt" oninput="updateNavn()">
-        <br>
+        <div id="skrivaNavn">
+            <h3>Skriva navn títt:</h3>
+            <input type="text" id="navn" name="navn" placeholder="GRE" oninput="updateNavn()">
+        </div>
 
         <div id="quiz">
-            <fieldset id="q1" class="q">
-                <legend id="qTitle">Hvussu brúkar tú tína frítið?</legend>
+            <fieldset class="qBox">
+                <legend class="qTitle">1. Tá tú skalt avgerða okkurt, hvat fylgir tú mest?</legend>
 
-                <div>
-                    <input type="radio" id="q1-A" name="q1" value="arb">
-                    <label for="q1-A">Eg arbeiði hart</label>
+                <div class="question">
+                    <input type="radio" name="q1" value="pera"> Logikkur og planlegging
+                    <br>
+                    <input type="radio" name="q1" value="dosmari"> Kenslur mínar
                 </div>
-                <div>
-                    <input type="radio" id="q1-B" name="q1" value="slappi">
-                    <label for="q1-B">Eg slappi av</label>
+            </fieldset>
+            <fieldset class="qBox">
+                <legend class="qTitle">2. Dámar tær væl at ímynda fiktivar <span title="scenarios" class="sprotin">hendingargongdir</span>?</legend>
+
+                <div class="question">
+                    <input type="radio" name="q2" value="pera"> Nei, eg haldi mær til veruleikanum
+                    <br>
+                    <input type="radio" name="q2" value="dosmari"> Ja, eg geri tað ofta
+                </div>
+            </fieldset>
+            <fieldset class="qBox">
+                <legend class="qTitle">3. Hvat arbeiði vilt tú hava?</legend>
+
+                <div class="question">
+                    <input type="radio" name="q3" value="pera"> Okkurt stabilt, <span title="respected" class="sprotin">virðingarfult</span> og <span title="predictable" class="sprotin">forútsiguligt</span>
+                    <br>
+                    <input type="radio" name="q3" value="dosmari"> Tað sum eg dámi, líkamikið hvat tað er
+                </div>
+            </fieldset>
+            <fieldset class="qBox">
+                <legend class="qTitle">4. Hvat hevði ein góður dagur fyri teg verið?</legend>
+
+                <div class="question">
+                    <input type="radio" name="q4" value="pera"> Ein produktivur dagur, har eg fái nógv gjørt
+                    <br>
+                    <input type="radio" name="q4" value="dosmari"> Ein avslappaður dagur, har eg njóti lívið
+                </div>
+            </fieldset>
+            <fieldset class="qBox">
+                <legend class="qTitle">5. Hvat virðir tú meira í lívinum?</legend>
+
+                <div class="question">
+                    <input type="radio" name="q5" value="pera"> Tryggleiki/stabilitet og rutinu
+                    <br>
+                    <input type="radio" name="q5" value="dosmari"> Fríheit og valið at gera nýggj ting
+                </div>
+            </fieldset>
+            <fieldset class="qBox">
+                <legend class="qTitle">6. Hvussu gert tú við uppgávur, tú fært?</legend>
+
+                <div class="question">
+                    <input type="radio" name="q6" value="pera"> Eg geri tær so skjótt eg fái tær
+                    <br>
+                    <input type="radio" name="q6" value="dosmari"> Eg geri tær seinni
+                </div>
+            </fieldset>
+            <fieldset class="qBox">
+                <legend class="qTitle">7. Í einum sosialum umhvørvi, fert tú heldur at</legend>
+
+                <div class="question">
+                    <input type="radio" name="q7" value="pera"> fokusera á at hava innihaldsríkar og týdninglarmiklar samrøður
+                    <br>
+                    <input type="radio" name="q7" value="dosmari"> fortelja søgur og ímynda ting í avslappaðum samrøðum
+                </div>
+            </fieldset>
+            <fieldset class="qBox">
+                <legend class="qTitle">8. Virðir tú kreativitet og hugflog yvir at vera gagnligur og <span title="practicality" class="sprotin">tað verkliga</span>?</legend>
+
+                <div class="question">
+                    <input type="radio" name="q8" value="pera"> Nei, tað verkliga kemur ALTÍÐ yvir tað kreativa
+                    <br>
+                    <input type="radio" name="q8" value="dosmari"> Ja, tað er betri at vera kreativur
+                </div>
+            </fieldset>
+            <fieldset class="qBox">
+                <legend class="qTitle">9. Ert tú serliga religiøsur?</legend>
+
+                <div class="question">
+                    <input type="radio" name="q9" value="pera"> Nei, eg haldi mær strangliga til vísindanum
+                    <br>
+                    <input type="radio" name="q9" value="dosmari"> Ja, Guð skapti heimin osv.
                 </div>
             </fieldset>
 
-            <button onclick="calc()">Lat inn svar</button>
+            <button id="latInn" onclick="calc()">Lat inn svar</button>
         </div>
 
         <div id="endi">
-            <strong><span id="navnOutput">Tú</span> <span id="met">ERT</span> ein dosmari!</strong>
+            <strong><span id="navnOutput">Tú</span> <span id="met">ERT KANSKA</span> ein dosmari!</strong>
+            <p id="foo">bar</p>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

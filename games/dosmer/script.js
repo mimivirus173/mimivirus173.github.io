@@ -1,25 +1,33 @@
 let navn = '';
-var stig = -1;
 
 // Rokna títt virði
 function calc() {
-    switch(true) {
-        case document.getElementById('q1-A').checked:
-            stig = 100;
-            break;
-        case document.getElementById('q1-B').checked:
-            stig = 0;
-            break;
-    }
+    let dosmaraStig = 0;
+    let peruStig = 0; // Eg minnist ikki um orðið pera er brúkt av pápanum í TVE, men tað er tað umventa av ein dosmara
     
-    // oh yeah nested if else functions
-    if(stig < 100 && stig >= 0) {
+    // Get all questions
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach(question => {
+        const selectedOption = question.querySelector('input[type="radio"]:checked');
+        if(selectedOption) {
+            if(selectedOption.value === 'dosmari') {
+                dosmaraStig++;
+            } else if (selectedOption.value === 'pera') {
+                peruStig++;
+            }
+        }
+    });
+    document.getElementById('foo').innerHTML = peruStig;
+    
+    // Døm um dosmari ella ei (oh yeah nested if else functions)
+    if(dosmaraStig > peruStig) {
         if(navn == '') {
             document.getElementById('met').innerHTML = "ERT";
         } else {
             document.getElementById('met').innerHTML = "ER";
         }
-    } else if(stig >= 100) {
+    } else if(peruStig > dosmaraStig) {
         if(navn == '') {
             document.getElementById('met').innerHTML = "ERT IKKI";
         } else {
@@ -34,8 +42,6 @@ function calc() {
     }
 }
 
-// Loopa funktiónina
-setInterval(calc, 10);
 
 // Navn títt
 function updateNavn() {
