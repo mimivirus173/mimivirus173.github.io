@@ -1,5 +1,6 @@
 *.ini
 bin/
+.vscode
 
 # node
 node_modules/
