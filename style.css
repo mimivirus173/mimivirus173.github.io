@@ -24,6 +24,7 @@ body {
     color: white;
     background-color: #001628;
     background-image: url(media/hst-deep-field.png);
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
