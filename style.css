@@ -17,8 +17,7 @@
     font-display: swap; /* Prevents invisible text while loading */
 }
 
-/** Variables **/
-/* Button colours */
+/** Button colour variables **/
 :root {
     --bg-colour: #0D161E;
     --main-orange: #FF6C23;
@@ -64,8 +63,8 @@ header {
 .banner {
     --banner-size: clamp(1.5rem, 4vw, 3.5rem);
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items: center;
     width: 100%;
     gap: 1rem;
@@ -75,19 +74,22 @@ header {
 
 .banner-text {
     text-align: center;
-    flex-grow: 1;
     min-width: 0;
-    padding: 0 20px;
+    padding: 0;
     font-size: var(--banner-size);
     line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 .banner-image {
-    height: calc(var(--banner-size) * 1.2);  /* matches text */
+    height: calc(var(--banner-size) * 1.4);
     width: auto;
-    flex-shrink: 0;
     object-fit: contain;
 }
+
+/* push each image to its own edge */
+.banner-image:first-child { justify-self: start; }
+.banner-image:last-child  { justify-self: end; }
 
 /* Navbar */
 nav {
