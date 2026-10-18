@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'Frutiger';
     src: url('fonts/Frutiger.ttf') format('truetype');
-    font-weight: 400; /* Regular weight */
+    font-weight: normal;
     font-style: normal;
     font-display: swap; /* Prevents invisible text while loading */
 }
@@ -12,9 +12,17 @@
 @font-face {
     font-family: 'Frutiger';
     src: url('fonts/Frutiger_bold.ttf') format('truetype');
-    font-weight: 700; /* Bold weight */
+    font-weight: bold;
     font-style: normal;
     font-display: swap; /* Prevents invisible text while loading */
+}
+
+/** Variables **/
+/* Button colours */
+:root {
+    --bg-colour: #0D161E;
+    --main-orange: #FF6C23;
+    --dark-orange: #963B15;
 }
 
 /** Main structure **/
@@ -22,7 +30,7 @@ body {
     font-family: Frutiger, Helvetica, Arial, sans-serif;
     margin: 0;
     color: white;
-    background-color: #001628;
+    background-color: var(--bg-colour);
     background-image: url(media/hst-deep-field.png);
     background-size: cover;
     min-height: 100vh;
@@ -37,8 +45,8 @@ main {
     margin: 0 auto;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #0D161E;
-    border: 2px solid #FF6C23;
+    background-color: var(--bg-colour);
+    border: 2px solid var(--main-orange);
     border-radius: 8px;
 }
 
@@ -99,27 +107,29 @@ ul {
 
 ul li a {
   display: block;
+  font-weight: bold;
+  font-size: larger;
   color: white;
-  background-color: #0D161E;
+  background-color: var(--bg-colour);
   padding: 14px 16px;
   text-decoration: none;
-  border: 2px solid #FF6C23;
+  border: 2px solid var(--main-orange);
   border-radius: 8px;
 }
 
 ul li a:hover:not(.active) {
-  background-color: #963B15;
+  background-color: var(--dark-orange);
   transition: 0.2s;
 }
 
 ul li a.active {
-  background-color: #FF6C23;
+  background-color: var(--main-orange);
 }
 
 /** Elements **/
 a {
     text-decoration: none;
-    color: #FF6C23;
+    color: var(--main-orange);
 }
 
 h1,
@@ -136,7 +146,7 @@ p {
 .card{
     color: white;
     margin-bottom: 10px;
-    border: 2px solid #FF6C23;
+    border: 2px solid var(--main-orange);
     border-radius: 8px;
     transition: 0.2s;
 }
@@ -146,9 +156,9 @@ p {
 }
 
 .card:hover{
-    background-color: #963B15;
+    background-color: var(--dark-orange);
 }
 
 .card:active{
-    background-color: #0D161E;
+    background-color: var(--bg-colour);
 }
