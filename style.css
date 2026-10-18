@@ -54,22 +54,31 @@ header {
 }
 
 .banner {
+    --banner-size: clamp(1.5rem, 4vw, 3.5rem);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-.banner-image {
-  max-width: 75px;
-  height: auto;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
 }
 
 .banner-text {
-  text-align: center;
-  flex-grow: 1;
-  padding: 0 20px;
-  font-size: 4.5vw;
+    text-align: center;
+    flex-grow: 1;
+    min-width: 0;
+    padding: 0 20px;
+    font-size: var(--banner-size);
+    line-height: 1.2;
+}
+
+.banner-image {
+    height: calc(var(--banner-size) * 1.2);  /* matches text */
+    width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
 /* Navbar */
